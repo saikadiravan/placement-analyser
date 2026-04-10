@@ -1,0 +1,233 @@
+Here's an extraction of DSA problems, System Design, and Behavioral principles from the provided data:
+
+**DSA Problems**
+
+**I. Core Data Structures & Algorithms Fundamentals**
+*   **DSA Fundamentals:**
+    *   Logic Building Problems
+    *   Analysis of Algorithms
+*   **Data Structures:**
+    *   Array
+    *   String
+    *   Hashing
+    *   Linked List
+    *   Stack
+    *   Queue
+    *   Tree (including Binary Tree, BST)
+    *   Graph
+    *   Trie
+    *   Heap
+*   **Algorithms:**
+    *   Searching Algorithms
+    *   Sorting Algorithms
+    *   Recursion
+    *   Greedy Algorithms
+    *   Graph Algorithms (BFS, DFS, Dijkstra, Topological Sort, Kosaraju's)
+    *   Dynamic Programming (DP)
+    *   Bitwise Algorithms
+*   **Advanced Data Structures/Algorithms:**
+    *   Segment Tree
+    *   Binary Indexed Tree (Fenwick Tree)
+    *   Square Root (Sqrt) Decomposition Algorithm
+    *   Binary Lifting
+    *   Geometry
+
+**II. Specific DSA Problems (Categorized by Data Structure/Algorithm Type)**
+
+*   **Array Problems:**
+    *   Largest Sum Contiguous Subarray
+    *   Search in a row-wise and column-wise sorted matrix
+    *   Print a given matrix in spiral form
+    *   Program for array rotation
+    *   Trapping Rain Water
+    *   Count pairs with given sum
+    *   Find the subarray with least average
+    *   Convert array into Zig-Zag fashion
+    *   Find duplicates in an array
+    *   Find a triplet that sum to a given value
+*   **String Problems:**
+    *   Validate an IP Address
+    *   Multiply Strings
+    *   Implement Atoi
+    *   Check if the string is rotated by two places
+    *   Permutations of a given string
+    *   Longest Repeating Subsequence
+    *   Roman Number to Integer
+    *   Length of the longest substring
+    *   String formation from substring
+    *   Check whether two strings are an anagram of each other
+    *   Look-and-Say Sequence
+    *   Remove minimum number of characters so that two strings become anagram
+    *   Find the smallest window in a string containing all characters of another string
+    *   Length of the longest substring without repeating characters
+*   **Linked List Problems:**
+    *   Reverse a linked list
+    *   Segregate even and odd nodes in a Linked List
+    *   Detect loop in a linked list
+    *   Delete all occurrences of a given key in a linked list
+    *   Remove loop in Linked List
+    *   Nth node from the end of linked list
+    *   Merge K sorted linked lists
+    *   Flatten a binary tree into linked list
+    *   Add two numbers represented by linked lists
+    *   Function to check if a singly linked list is palindrome
+    *   Clone a linked list with next and random pointer
+    *   Delete without head pointer
+    *   Given a linked list of 0s, 1s and 2s, sort it
+    *   Intersection of Two Linked Lists
+*   **Searching Problems:**
+    *   Search an element in a sorted and rotated array
+    *   Square root of an integer
+    *   First and last occurrences of x
+    *   Find a peak element
+    *   Find the smallest positive number missing from an unsorted array
+    *   Allocate minimum number of pages
+    *   Counting elements in two arrays
+    *   Median of two sorted arrays of different sizes
+*   **Sorting Problems:**
+    *   k largest (or smallest) elements in an array
+    *   Sort an array of 0s, 1s, and 2s
+    *   Count Inversions in an array
+    *   Merge Without Extra Space
+    *   Minimum Platforms
+    *   Quick Sort
+    *   Heap Sort
+    *   Merge k Sorted Arrays
+    *   Overlapping Intervals
+*   **Stack Problems:**
+    *   Check for Balanced Brackets in an expression (well-formedness) using Stack
+    *   Sort a stack using recursion
+    *   The Celebrity Problem
+    *   Next Greater Element
+    *   Queue using two Stacks
+*   **Queue Problems:**
+    *   Stack using two queues
+    *   Connect n ropes with minimum cost
+    *   Minimum time required to rot all oranges
+    *   First negative integer in every window of size k
+    *   Reversing a Queue
+*   **Tree Problems:**
+    *   Inorder Traversal
+    *   Preorder Traversal
+    *   Kth largest element in BST
+    *   Left View of Binary Tree
+    *   Right View of Binary Tree
+    *   Check for BST
+    *   Diameter of a Binary Tree
+    *   Boundary Traversal of binary tree
+    *   Height of Binary Tree
+    *   Lowest Common Ancestor in a Binary Tree
+    *   Binary Tree to DLL
+    *   Root to leaf path sum
+    *   Reverse Level Order Traversal
+    *   Construct Tree from Inorder & Preorder
+    *   ZigZag Tree Traversal
+    *   Serialize and Deserialize a Binary Tree
+*   **Graph Problems:**
+    *   BFS of Graph
+    *   DFS of Graph
+    *   Find the number of islands
+    *   Topological sort
+    *   Steps by Knight
+    *   Strongly Connected Components (Kosaraju's Algo)
+    *   Alien Dictionary
+    *   Dijkstra Algorithm
+    *   Detect Cycle in a Directed Graph
+    *   Detect cycle in an undirected graph
+*   **Trie Problems:**
+    *   Trie Insert and Search
+    *   Trie Delete
+    *   Print unique rows in a given Binary matrix
+    *   Longest Common Prefix using Trie
+    *   Minimum XOR Value Pair
+    *   Palindrome pair in an array of words (or strings)
+*   **Heap and Hash Problems:**
+    *   Minimum Cost of ropes
+    *   k largest elements
+    *   Kth element in Matrix
+    *   Find median in a stream
+    *   Kth largest element in a stream
+    *   Rearrange characters
+    *   Nearly sorted
+    *   Nuts and Bolts Problem
+    *   Check if two strings are k-anagrams or not
+    *   Sort an array according to the other
+    *   Swapping pairs make sum equal
+    *   Smallest distinct window
+    *   Find first repeated character
+*   **BitMagic Problems:**
+    *   Find the Missing Number
+    *   Power of 2
+    *   Reverse Bits
+    *   Maximum subset XOR
+    *   Check set bits
+    *   Minimum X (xor) A
+    *   Longest Consecutive 1's
+    *   Number of 1 Bits
+*   **Recursion and Backtracking Problems:**
+    *   Write a program to print all permutations of a given string
+    *   Rat in a Maze Problem - I
+    *   Josephus problem
+    *   Combination Sum
+    *   Partition Equal Subset Sum
+    *   N-Queen Problem
+    *   Shuffle integers
+    *   Hamiltonian Path
+    *   Find the string in grid
+    *   Pascal Triangle
+    *   Solve the Sudoku
+    *   Largest number in K swaps
+*   **Dynamic Programming Problems:**
+    *   0 - 1 Knapsack Problem
+    *   Partition Equal Subset Sum
+    *   Coin Change
+    *   Longest Common Subsequence
+    *   Stock buy and sell
+    *   Interleaved Strings
+    *   Edit Distance
+    *   Stickler Thief
+    *   Longest Common Substring
+    *   Number of Coins
+    *   Egg Dropping Puzzle
+    *   Word Break
+    *   Wildcard Pattern Matching
+    *   Total Decoding Messages
+    *   Jump Game
+    *   Special Keyboard
+    *   Longest Palindromic Subsequence
+
+**III. Computer Fundamentals (MCQs)**
+*   OOPs
+*   DBMS (Database Management Systems)
+*   Operating Systems
+*   Data Structures & Algorithms (also covered above)
+
+**IV. Language Based Questions**
+*   C
+*   C++
+*   Java
+
+**V. Puzzles**
+*   Tricky questions to test problem-solving skills and logical thinking.
+
+---
+
+**System Design**
+
+The term "System Design" is explicitly mentioned as an "Advanced" topic in the GeeksforGeeks navigation menu for interview preparation. However, the provided text does not list specific System Design problems or detailed principles within the "Amazon SDE Sheet" content itself. It is acknowledged as a general area for preparation.
+
+---
+
+**Behavioral Principles**
+
+*   **Communication Skills:** Strong communication is explicitly mentioned as essential for success.
+*   **Analytical Thinking:** Required for solving problems effectively.
+*   **Real-world Problem-Solving Ability:** Focus in technical rounds.
+*   **Leadership Principles:** Evaluated during the Bar Raiser Round.
+*   **Cultural Fit:** Assessed during the Bar Raiser Round.
+*   **Project Discussion:**
+    *   Thorough revision of all past project work.
+    *   Ability to be "grilled very deep" on projects.
+    *   Confidence in discussing chosen technology stack.
+    *   For AWS projects, specific confidence in providing sufficient answers is required.
+    *   Demonstrating "what's new" or "your input" even for basic clones.

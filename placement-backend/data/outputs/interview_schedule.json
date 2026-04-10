@@ -1,0 +1,378 @@
+{
+    "company": "google",
+    "role": "sde",
+    "total_days": 21,
+    "schedule": [
+        {
+            "day": 1,
+            "focus": "DSA: String Manipulation Basics",
+            "tasks": [
+                {
+                    "title": "Remove Duplicate Letters (as a foundational string problem)",
+                    "category": "dsa"
+                },
+                {
+                    "title": "License Key Formatting",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Unique Email Addresses",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Backspace String Compare",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Start by thoroughly understanding and implementing solutions to fundamental string manipulation problems."
+        },
+        {
+            "day": 2,
+            "focus": "DSA: Arrays and Hashing",
+            "tasks": [
+                {
+                    "title": "Two Sum",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Plus One",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Summary Ranges",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Bulls and Cows",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Leverage hash maps to efficiently solve problems involving lookups and frequency counting."
+        },
+        {
+            "day": 3,
+            "focus": "DSA: Sorting and Searching",
+            "tasks": [
+                {
+                    "title": "Merge Intervals",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Merge Sort vs Quick Sort (conceptual)",
+                    "category": "behavioral"
+                },
+                {
+                    "title": "Binary Search related problems (general practice)",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Be prepared to discuss the trade-offs between different sorting algorithms like merge sort and quick sort."
+        },
+        {
+            "day": 4,
+            "focus": "DSA: Trees (Basic Traversal & Properties)",
+            "tasks": [
+                {
+                    "title": "Count Complete Tree Nodes",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Binary Tree Longest Consecutive Sequence",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Zigzag Iterator (can be adapted for tree level order)",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Focus on tree traversals (pre-order, in-order, post-order, level-order) and their applications."
+        },
+        {
+            "day": 5,
+            "focus": "DSA: Trees (Advanced & Design)",
+            "tasks": [
+                {
+                    "title": "Evaluate Division",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Android Unlock Patterns",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Consider how trees can represent complex relationships and explore graph-like problems that use tree concepts."
+        },
+        {
+            "day": 6,
+            "focus": "DSA: Linked Lists",
+            "tasks": [
+                {
+                    "title": "Add Two Numbers",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Sentence Similarity (can be adapted for linked list manipulation)",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Logger Rate Limiter (can be implemented with linked lists/queues)",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Practice manipulating linked lists, including reversing, merging, and detecting cycles."
+        },
+        {
+            "day": 7,
+            "focus": "DSA: Graphs (Basics & Traversal)",
+            "tasks": [
+                {
+                    "title": "Number of Islands",
+                    "category": "dsa"
+                },
+                {
+                    "title": "UTF-8 Validation",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Max Points on a Line",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Master Depth-First Search (DFS) and Breadth-First Search (BFS) for graph traversal problems."
+        },
+        {
+            "day": 8,
+            "focus": "DSA: Graphs (Advanced & Applications)",
+            "tasks": [
+                {
+                    "title": "Most Stones Removed with Same Row or Column",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Bomb Enemy",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Number of Islands II",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Apply graph algorithms to problems involving connectivity, reachability, and optimization."
+        },
+        {
+            "day": 9,
+            "focus": "DSA: Dynamic Programming (Introduction)",
+            "tasks": [
+                {
+                    "title": "Climbing Stairs (classic DP)",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Decode String",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Encode String with Shortest Length",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Begin with simpler DP problems to grasp the concepts of overlapping subproblems and optimal substructure."
+        },
+        {
+            "day": 10,
+            "focus": "DSA: Dynamic Programming (Intermediate)",
+            "tasks": [
+                {
+                    "title": "Longest Substring with At Most Two Distinct Characters",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Longest Substring with At Most K Distinct Characters",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Split Array Largest Sum",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Practice DP problems that involve optimization and counting, often combining with other data structures."
+        },
+        {
+            "day": 11,
+            "focus": "DSA: Backtracking and Recursion",
+            "tasks": [
+                {
+                    "title": "Word Squares",
+                    "category": "dsa"
+                },
+                {
+                    "title": "24 Game",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Cracking the Safe",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Understand how to formulate recursive solutions and optimize them with backtracking techniques."
+        },
+        {
+            "day": 12,
+            "focus": "DSA: Greedy Algorithms",
+            "tasks": [
+                {
+                    "title": "Minimum Domino Rotations For Equal Row",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Minimize Max Distance to Gas Station",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Minimum Cost to Hire K Workers",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Focus on identifying problems where making the locally optimal choice leads to a globally optimal solution."
+        },
+        {
+            "day": 13,
+            "focus": "DSA: Complex Problems & Edge Cases",
+            "tasks": [
+                {
+                    "title": "Longest Absolute File Path",
+                    "category": "dsa"
+                },
+                {
+                    "title": "K Empty Slots",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Next Closest Time",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Practice problems that require careful handling of edge cases and specific problem constraints."
+        },
+        {
+            "day": 14,
+            "focus": "System Design (Introduction & Core Concepts)",
+            "tasks": [
+                {
+                    "title": "Review System Design Fundamentals (Scalability, Availability, Latency, CAP Theorem)",
+                    "category": "system-design"
+                },
+                {
+                    "title": "How would you split a search query across multiple machines?",
+                    "category": "behavioral"
+                }
+            ],
+            "tips": "Familiarize yourself with the fundamental principles of designing scalable and robust systems."
+        },
+        {
+            "day": 15,
+            "focus": "System Design (Specific Scenarios)",
+            "tasks": [
+                {
+                    "title": "Design the game Snake (focus on data structures and core logic)",
+                    "category": "dsa"
+                },
+                {
+                    "title": "Design Search Autocomplete System",
+                    "category": "dsa"
+                }
+            ],
+            "tips": "Apply your DSA knowledge to think about the data structures and algorithms needed for system components."
+        },
+        {
+            "day": 16,
+            "focus": "Behavioral & Project Deep Dive",
+            "tasks": [
+                {
+                    "title": "Questions from Project: How it works, Bigram and ngram model approach, etc.",
+                    "category": "behavioral"
+                },
+                {
+                    "title": "Questions from Project: Bi-directional Sync b/w mysql and sqilte db.",
+                    "category": "behavioral"
+                }
+            ],
+            "tips": "Be ready to articulate the technical details and design choices of your past projects in depth."
+        },
+        {
+            "day": 17,
+            "focus": "Googliness & Behavioral",
+            "tasks": [
+                {
+                    "title": "Why should one use merge sort over quick sort and vice-versa.",
+                    "category": "behavioral"
+                },
+                {
+                    "title": "What data structures will you use to develop the game Snake?",
+                    "category": "behavioral"
+                }
+            ],
+            "tips": "Demonstrate a collaborative mindset and a passion for problem-solving, even in behavioral questions."
+        },
+        {
+            "day": 18,
+            "focus": "Mock Interview 1 (DSA Focus)",
+            "tasks": [
+                {
+                    "title": "Practice solving 2 medium DSA problems under timed conditions.",
+                    "category": "review"
+                },
+                {
+                    "title": "Simulate a Google phone interview with a focus on explaining thought process.",
+                    "category": "review"
+                }
+            ],
+            "tips": "Focus on clear communication and thinking aloud during your mock interviews to simulate the real environment."
+        },
+        {
+            "day": 19,
+            "focus": "Mock Interview 2 (Mixed DSA & System Design Concepts)",
+            "tasks": [
+                {
+                    "title": "Practice 1 medium DSA problem and discuss a simplified system design scenario.",
+                    "category": "review"
+                },
+                {
+                    "title": "Practice coding on a shared document, emphasizing clear variable names and logic.",
+                    "category": "review"
+                }
+            ],
+            "tips": "Emphasize clarity in your shared document coding and be ready to pivot between technical problem-solving and system design discussions."
+        },
+        {
+            "day": 20,
+            "focus": "Review and Consolidation",
+            "tasks": [
+                {
+                    "title": "Review your weakest DSA topics and any challenging problems encountered.",
+                    "category": "review"
+                },
+                {
+                    "title": "Revisit key behavioral scenarios and prepare STAR method responses.",
+                    "category": "review"
+                }
+            ],
+            "tips": "Consolidate your learning by revisiting areas where you feel less confident, ensuring a strong foundational understanding."
+        },
+        {
+            "day": 21,
+            "focus": "Final Preparation & Mindset",
+            "tasks": [
+                {
+                    "title": "Light review of core concepts and algorithms.",
+                    "category": "review"
+                },
+                {
+                    "title": "Focus on getting adequate rest and maintaining a positive mindset.",
+                    "category": "review"
+                }
+            ],
+            "tips": "Approach the interview with confidence, knowing that your preparation has equipped you to showcase your problem-solving abilities."
+        }
+    ]
+}

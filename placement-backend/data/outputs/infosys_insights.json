@@ -1,0 +1,34 @@
+{
+    "company": "Infosys",
+    "role": "system engineer",
+    "interviewProcess": [
+        "Round 1: Online Assessment Test (MCQs, 2 programming questions, no aptitude questions, 65% qualifying percentage)",
+        "Round 2: HR interview (behavioral, questions from resume including family background, interests, project)"
+    ],
+    "dsaTopics": [],
+    "systemDesignTopics": [],
+    "behavioralQuestions": [
+        "Tell me about yourself"
+    ],
+    "difficulty": "Easy",
+    "avgRounds": 2,
+    "enrichedInsights": "Infosys appears to have a structured recruitment process, starting with an online assessment that includes programming questions and logical reasoning, followed by a behavioral HR interview. Candidates are advised to focus on their resume content, projects, and general background. The interview process seems geared towards assessing foundational knowledge and fit within the company.  For experienced candidates, there might be additional technical rounds. The company values a minimum academic percentage and emphasizes both technical and behavioral aspects in its evaluation.",
+    "_sources": {
+        "github": {
+            "status": "failed",
+            "chars": 0
+        },
+        "web": {
+            "status": "ok",
+            "chars": 8964
+        },
+        "reddit": {
+            "status": "ok",
+            "chars": 27802
+        },
+        "ambitionbox": {
+            "status": "skipped",
+            "chars": 0
+        }
+    }
+}

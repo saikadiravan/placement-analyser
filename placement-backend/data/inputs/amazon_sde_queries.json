@@ -1,0 +1,23 @@
+[
+  {
+    "site": "GeeksforGeeks",
+    "search_query": "amazon sde interview questions site:geeksforgeeks.org",
+    "initial_url_guess": "",
+    "url": "",
+    "valid": false
+  },
+  {
+    "site": "InterviewBit",
+    "search_query": "amazon sde interview questions site:interviewbit.com",
+    "initial_url_guess": "",
+    "url": "",
+    "valid": false
+  },
+  {
+    "site": "PrepInsta",
+    "search_query": "amazon sde interview questions site:prepinsta.com",
+    "initial_url_guess": "",
+    "url": "",
+    "valid": false
+  }
+]

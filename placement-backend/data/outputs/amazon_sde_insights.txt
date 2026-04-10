@@ -1,0 +1,219 @@
+```
+Amazon SDE Interview Analysis
+
+This analysis extracts Data Structures & Algorithms (DSA) problems, System Design, and Behavioral principles from the provided Amazon SDE interview preparation guide.
+
+---
+
+**1. DSA Problems**
+
+Amazon SDE interviews heavily emphasize Data Structures and Algorithms. The hiring process includes an Online Assessment with medium-level coding questions, and subsequent technical rounds with DS & algorithm-based problems, increasing in difficulty. Common data structures include Array, String, Linked List, Stack, Queue, Tree (Binary Tree, BST), and Graph. Tree-based recursion is explicitly highlighted as a crucial skill.
+
+**A. Data Structures & Associated Problems:**
+
+*   **Array**
+    *   Largest Sum Contiguous Subarray
+    *   Search in a row-wise and column-wise sorted matrix
+    *   Print a given matrix in spiral form
+    *   Program for array rotation
+    *   Trapping Rain Water
+    *   Count pairs with given sum
+    *   Find the subarray with least average
+    *   Convert array into Zig-Zag fashion
+    *   Find duplicates in an array
+    *   Find a triplet that sum to a given value
+*   **String**
+    *   Validate an IP Address
+    *   Multiply Strings
+    *   Implement Atoi
+    *   Check if the string is rotated by two places
+    *   Permutations of a given string
+    *   Longest Repeating Subsequence
+    *   Roman Number to Integer
+    *   Length of the longest substring
+    *   String formation from substring
+    *   Check whether two strings are an anagram of each other
+    *   Look-and-Say Sequence
+    *   Remove minimum number of characters so that two strings become anagram
+    *   Find the smallest window in a string containing all characters of another string
+    *   Length of the longest substring without repeating characters
+*   **Linked List**
+    *   Reverse a linked list
+    *   Segregate even and odd nodes in a Linked List
+    *   Detect loop in a linked list
+    *   Delete all occurrences of a given key in a linked list
+    *   Remove loop in Linked List
+    *   Nth node from the end of linked list
+    *   Merge K sorted linked lists
+    *   Flatten a binary tree into linked list
+    *   Add two numbers represented by linked lists
+    *   Function to check if a singly linked list is palindrome
+    *   Clone a linked list with next and random pointer
+    *   Delete without head pointer
+    *   Given a linked list of 0s, 1s and 2s, sort it
+    *   Intersection of Two Linked Lists
+*   **Stack**
+    *   Check for Balanced Brackets in an expression (well-formedness) using Stack
+    *   Sort a stack using recursion
+    *   The Celebrity Problem
+    *   Next Greater Element
+    *   Queue using two Stacks
+*   **Queue**
+    *   Stack using two queues
+    *   Connect n ropes with minimum cost
+    *   Minimum time required to rot all oranges
+    *   First negative integer in every window of size k
+    *   Reversing a Queue
+*   **Tree (Binary Tree, BST)**
+    *   Inorder Traversal
+    *   Preorder Traversal
+    *   Kth largest element in BST
+    *   Left View of Binary Tree
+    *   Right View of Binary Tree
+    *   Check for BST
+    *   Diameter of a Binary Tree
+    *   Boundary Traversal of binary tree
+    *   Height of Binary Tree
+    *   Lowest Common Ancestor in a Binary Tree
+    *   Binary Tree to DLL
+    *   Root to leaf path sum
+    *   Reverse Level Order Traversal
+    *   Construct Tree from Inorder & Preorder
+    *   ZigZag Tree Traversal
+    *   Serialize and Deserialize a Binary Tree
+*   **Graph**
+    *   BFS of Graph
+    *   DFS of Graph
+    *   Find the number of islands
+    *   Topological sort
+    *   Steps by Knight
+    *   Strongly Connected Components (Kosaraju's Algo)
+    *   Alien Dictionary
+    *   Dijkstra Algorithm
+    *   Detect Cycle in a Directed Graph
+    *   Detect cycle in an undirected graph
+*   **Trie**
+    *   Trie Insert and Search
+    *   Trie Delete
+    *   Print unique rows in a given Binary matrix
+    *   Longest Common Prefix using Trie
+    *   Minimum XOR Value Pair
+    *   Palindrome pair in an array of words (or strings)
+*   **Heap and Hash**
+    *   Minimum Cost of ropes
+    *   k largest elements
+    *   Kth element in Matrix
+    *   Find median in a stream
+    *   Kth largest element in a stream
+    *   Rearrange characters
+    *   Nearly sorted
+    *   Nuts and Bolts Problem
+    *   Check if two strings are k-anagrams or not
+    *   Sort an array according to the other
+    *   Swapping pairs make sum equal
+    *   Smallest distinct window
+    *   Find first repeated character
+
+**B. Algorithms & Associated Problems:**
+
+*   **Searching Algorithms**
+    *   Search an element in a sorted and rotated array
+    *   Square root of an integer
+    *   First and last occurrences of x
+    *   Find a peak element
+    *   Find the smallest positive number missing from an unsorted array
+    *   Allocate minimum number of pages
+    *   Counting elements in two arrays
+    *   Median of two sorted arrays of different sizes
+*   **Sorting Algorithms**
+    *   k largest(or smallest) elements in an array
+    *   Sort an array of 0s, 1s, and 2s
+    *   Count Inversions in an array
+    *   Merge Without Extra Space
+    *   Minimum Platforms
+    *   Quick Sort
+    *   Heap Sort
+    *   Merge k Sorted Arrays
+    *   Overlapping Intervals
+*   **Recursion and Backtracking**
+    *   Write a program to print all permutations of a given string
+    *   Rat in a Maze Problem - I
+    *   Josephus problem
+    *   Combination Sum
+    *   Partition Equal Subset Sum
+    *   N-Queen Problem
+    *   Shuffle integers
+    *   Hamiltonian Path
+    *   Find the string in grid
+    *   Pascal Triangle
+    *   Solve the Sudoku
+    *   Largest number in K swaps
+*   **Dynamic Programming**
+    *   0 - 1 Knapsack Problem
+    *   Partition Equal Subset Sum
+    *   Coin Change
+    *   Longest Common Subsequence
+    *   Stock buy and sell
+    *   Interleaved Strings
+    *   Edit Distance
+    *   Stickler Thief
+    *   Longest Common Substring
+    *   Number of Coins
+    *   Egg Dropping Puzzle
+    *   Word Break
+    *   Wildcard Pattern Matching
+    *   Total Decoding Messages
+    *   Jump Game
+    *   Special Keyboard
+    *   Longest Palindromic Subsequence
+*   **BitMagic**
+    *   Find the Missing Number
+    *   Power of 2
+    *   Reverse Bits
+    *   Maximum subset XOR
+    *   Check set bits
+    *   Minimum X (xor) A
+    *   Longest Consecutive 1's
+    *   Number of 1 Bits
+*   **Advanced Data Structures/Algorithms (mentioned as topics)**
+    *   Segment Tree
+    *   Binary Indexed Tree or Fenwick Tree
+    *   Square Root (Sqrt) Decomposition Algorithm
+    *   Binary Lifting
+    *   Geometry
+
+**C. Other Technical Aspects:**
+
+*   **Computer Fundamentals (MCQs):** OOPs, DBMS, Operating Systems, Data Structures & Algorithms.
+*   **Language-Based Questions:** C, C++, Java specific queries to check grasp of the chosen language.
+*   **Puzzles:** To assess problem-solving skills and logical thinking.
+
+---
+
+**2. System Design**
+
+The provided text explicitly *mentions* "System Design" as a general topic available on GeeksforGeeks but does not detail specific System Design problems or principles relevant to the Amazon SDE interview within the "Amazon SDE Sheet" content.
+
+However, "Project Discussion" is a significant part of the technical rounds. While not explicitly termed "System Design," deep grilling on projects will implicitly involve design choices, architecture, and technology stack. Candidates are advised to:
+*   Thoroughly revise all work done on projects.
+*   Be prepared for deep grilling, mentioning only topics they are confident about.
+*   Be ready to discuss "what's new" in their project and their input.
+*   For AWS projects, strong confidence and sufficient answers are required.
+
+---
+
+**3. Behavioral Principles**
+
+Behavioral aspects are primarily assessed in the "Bar Raiser Round" but are foundational throughout the interview process.
+
+*   **Core Principles:**
+    *   **Amazon Leadership Principles:** Explicitly evaluated. Candidates should understand and be able to demonstrate these principles through their experiences.
+    *   **Cultural Fit Evaluation:** Assesses alignment with Amazon's culture and values.
+*   **Key Skills & Traits:**
+    *   **Solid Communication Skills:** Essential for explaining technical solutions and discussing experiences.
+    *   **Analytical Thinking:** Demonstrated through problem-solving and decision-making.
+    *   **Ability to Solve Real-World Problems:** Applying technical knowledge effectively to practical scenarios.
+    *   **Project Discussion:** Used to evaluate experience, ownership, and technical depth in a real-world context.
+
+---
+```
