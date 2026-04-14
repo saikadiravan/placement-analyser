@@ -4,6 +4,8 @@ from src.recommendation.agents.gemini_agent import generate_study_plan
 from src.recommendation.core.rescheduler    import reschedule_by_completed_days
 from flask_cors import CORS # Add this
 from src.utils.paths import OUTPUTS_DIR
+from src.integration.build_schedule import run_pipeline
+
 
 app = Flask(__name__)
 CORS(app)
@@ -16,7 +18,30 @@ def _company_slug(company: str) -> str:
 # ─────────────────────────────────────────────
 # ROUTES
 # ─────────────────────────────────────────────
-
+@app.route("/extract", methods=["POST"])
+def extract_company_data():
+    """
+    Online Mode route — Triggers the multi-agent ETL pipeline to scrape, 
+    filter, and cache real company insights.
+    """
+    data = request.json
+    company = data.get("company")
+    role = data.get("role", "SDE")
+    
+    if not company:
+        return jsonify({"error": "Company name is required"}), 400
+        
+    try:
+        # Runs GitHub/Reddit/Web extraction -> Great Filter -> Saves to JSON
+        result = run_pipeline(company, role)
+        return jsonify({
+            "message": f"Successfully extracted and filtered data for {company}", 
+            "data": result
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+    
 @app.route("/generate-plan", methods=["POST"])
 def generate():
     """
@@ -96,27 +121,17 @@ def reschedule():
 
 @app.route("/schedule/<company>", methods=["GET"])
 def get_schedule(company: str):
-    """
-    Free route — reads current schedule from disk for the given company.
-    Used by the frontend to load or refresh the active plan.
-
-    Example: GET /schedule/google
-    """
-    slug = _company_slug(company)
-    path = OUTPUTS_DIR / f"{slug}_schedule.json"
-
-    if not path.exists():
-        return jsonify({
-            "error":   "schedule_not_found",
-            "message": (
-                f"No schedule found for '{company}'. "
-                "Call POST /generate-plan first."
-            ),
-        }), 404
-
-    with open(path, "r", encoding="utf-8") as f:
-        return jsonify(json.load(f))
-
+    """ Free route — reads current schedule from disk for the given company. Used by the frontend to load or refresh the active plan. """
+    # Match the file naming convention exactly
+    safe_company = company.lower().replace(" ", "_").replace(".", "")
+    file_path = OUTPUTS_DIR / f"{safe_company}_schedule.json"
+    
+    if file_path.exists():
+        with open(file_path, "r", encoding="utf-8") as f:
+            return jsonify(json.load(f))
+            
+    # Return 404 ONLY if the file genuinely does not exist yet
+    return jsonify({"error": f"No schedule found for {company}"}), 404
 
 @app.route("/schedule", methods=["GET"])
 def list_schedules():
@@ -133,6 +148,25 @@ def list_schedules():
         })
 
     return jsonify({"schedules": schedules})
+
+@app.route("/insights/<company>", methods=["GET"])
+def get_insights(company: str):
+    """
+    Online Mode route — Fetches the extracted JSON insights from disk.
+    """
+    safe_company = company.lower().replace(" ", "_")
+    verified_path = OUTPUTS_DIR / f"{safe_company}_verified_insights.json"
+    raw_path = OUTPUTS_DIR / f"{safe_company}_insights.json"
+    
+    # Serve verified insights if available, else raw insights
+    if verified_path.exists():
+        with open(verified_path, "r", encoding="utf-8") as f:
+            return jsonify(json.load(f))
+    elif raw_path.exists():
+        with open(raw_path, "r", encoding="utf-8") as f:
+            return jsonify(json.load(f))
+    else:
+        return jsonify({"error": f"No insights found for {company}"}), 404
 
 
 # ─────────────────────────────────────────────

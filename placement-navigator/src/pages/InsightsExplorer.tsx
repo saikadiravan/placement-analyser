@@ -4,6 +4,9 @@ import { ChevronDown, ChevronRight, Search, ExternalLink, Code2, Layout, Users, 
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { COMPANIES, getCompanyInsights, type CompanyInsight } from "@/lib/studyPlanEngine";
+import { useEffect} from "react";
+import { useMode } from "@/context/ModeContext";
+import { fetchCompanyInsights } from "@/lib/api";
 
 const categoryIcons = {
   dsa: Code2,
@@ -42,11 +45,22 @@ export default function InsightsExplorer() {
 }
 
 function CompanyCard({ company, expanded, onToggle, delay }: { company: string; expanded: boolean; onToggle: () => void; delay: number }) {
-  const insight = expanded ? getCompanyInsights(company) : null;
+  const { isOnline } = useMode();
+  const [insight, setInsight] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (expanded) {
+      setLoading(true);
+      fetchCompanyInsights(company, isOnline)
+        .then(data => setInsight(data))
+        .catch(err => console.error(err))
+        .finally(() => setLoading(false));
+    }
+  }, [expanded, company, isOnline]);
 
   return (
-    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay }}
-      className="glass-card overflow-hidden rounded-xl">
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay }} className="glass-card overflow-hidden rounded-xl">
       <button onClick={onToggle} className="flex w-full items-center justify-between p-5 text-left transition-colors hover:bg-muted/30">
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -54,7 +68,7 @@ function CompanyCard({ company, expanded, onToggle, delay }: { company: string; 
           </div>
           <div>
             <span className="font-semibold">{company}</span>
-            {insight && (
+            {insight && !loading && (
               <div className="flex items-center gap-2 mt-0.5">
                 <Badge variant="outline" className="text-[10px]">Difficulty: {insight.difficulty}</Badge>
                 <Badge variant="outline" className="text-[10px]">{insight.avgRounds} rounds avg</Badge>
@@ -65,27 +79,23 @@ function CompanyCard({ company, expanded, onToggle, delay }: { company: string; 
         {expanded ? <ChevronDown className="h-5 w-5 text-muted-foreground" /> : <ChevronRight className="h-5 w-5 text-muted-foreground" />}
       </button>
 
+      {/* Render Data only when expanded */}
       <AnimatePresence>
-        {expanded && insight && (
-          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}>
-            <div className="border-t border-border/50 p-5">
-              <div className="grid gap-6 md:grid-cols-3">
-                <InsightSection icon={Code2} title="DSA Topics Asked" items={insight.dsaTopics} color="text-primary" />
-                <InsightSection icon={Layout} title="System Design Topics" items={insight.systemDesignTopics} color="text-accent" />
-                <InsightSection icon={Users} title="Behavioral Questions" items={insight.behavioralQuestions} color="text-success" />
-              </div>
-
-              <div className="mt-5 border-t border-border/50 pt-4">
-                <p className="text-xs font-medium text-muted-foreground mb-2">Sources</p>
-                <div className="flex flex-wrap gap-2">
-                  {insight.sources.map((s) => (
-                    <span key={s} className="inline-flex items-center gap-1 rounded-full border border-border bg-muted/50 px-3 py-1 text-xs">
-                      <ExternalLink className="h-3 w-3" /> {s}
-                    </span>
-                  ))}
+        {expanded && (
+          <motion.div initial={{ height: 0 }} animate={{ height: "auto" }} exit={{ height: 0 }} className="overflow-hidden border-t border-border/50 bg-muted/10">
+            <div className="p-5">
+              {loading ? (
+                <p className="text-sm text-muted-foreground">Loading insights...</p>
+              ) : insight ? (
+                <div className="grid gap-6 md:grid-cols-2">
+                  <InsightSection icon={Users} title="Interview Process" items={insight.interviewProcess || []} color="text-primary" />
+                  <InsightSection icon={Code2} title="Top DSA Topics" items={insight.dsaTopics || []} color="text-blue-500" />
+                  <InsightSection icon={Layout} title="System Design" items={insight.systemDesignTopics || []} color="text-purple-500" />
+                  <InsightSection icon={Users} title="Behavioral Questions" items={insight.behavioralQuestions || []} color="text-green-500" />
                 </div>
-              </div>
+              ) : (
+                <p className="text-sm text-destructive">No insights available. Generate a plan for this company first!</p>
+              )}
             </div>
           </motion.div>
         )}

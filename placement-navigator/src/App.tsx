@@ -14,30 +14,33 @@ import GapAnalyzer from "@/pages/GapAnalyzer";
 import PipelineVisualization from "@/pages/PipelineVisualization";
 import InterviewSimulator from "@/pages/InterviewSimulator";
 import NotFound from "./pages/NotFound";
+import { ModeProvider } from "@/context/ModeContext";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/generate" element={<StudyPlanGenerator />} />
-          <Route path="/analytics" element={<AnalyticsDashboard />} />
-          <Route path="/difficulty" element={<DifficultyLeaderboard />} />
-          <Route path="/gap-analyzer" element={<GapAnalyzer />} />
-          <Route path="/progress" element={<ProgressTracker />} />
-          <Route path="/pipeline" element={<PipelineVisualization />} />
-          <Route path="/insights" element={<InsightsExplorer />} />
-          <Route path="/simulator" element={<InterviewSimulator />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <ModeProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/generate" element={<StudyPlanGenerator />} />
+            <Route path="/analytics" element={<AnalyticsDashboard />} />
+            <Route path="/difficulty" element={<DifficultyLeaderboard />} />
+            <Route path="/gap-analyzer" element={<GapAnalyzer />} />
+            <Route path="/progress" element={<ProgressTracker />} />
+            <Route path="/pipeline" element={<PipelineVisualization />} />
+            <Route path="/insights" element={<InsightsExplorer />} />
+            <Route path="/simulator" element={<InterviewSimulator />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </ModeProvider>
   </QueryClientProvider>
 );
 

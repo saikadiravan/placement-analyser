@@ -1,10 +1,10 @@
 {
-    "company": "apple",
-    "role": "sde",
+    "company": "Apple",
+    "role": "Software Engineer",
     "interviewProcess": [
-        "Round 1: Technical coding assessment focusing on data structures and algorithms, requiring extensive LeetCode preparation.",
-        "Round 2: Onsite technical rounds, which include multiple coding challenges and behavioral discussions, often based on previous interview patterns.",
-        "Round 3: HR discussion covering motivations, fit, and general company inquiries."
+        "Round 1: Coding round (50 minutes)",
+        "Round 2: System design round (50 minutes)",
+        "Round 3: HR round (50 minutes)"
     ],
     "dsaTopics": [
         "Two Sum",
@@ -56,36 +56,39 @@
         "Best Time to Buy and Sell Stock",
         "Concatenated Words",
         "First Unique Character in a String",
-        "Knight Probability in Chessboard"
+        "Knight Probability in Chessboard",
+        "Zigzag Iterator"
     ],
     "systemDesignTopics": [
-        "Handling asynchronous API calls and token refresh"
+        "Design a game leaderboard displaying top rankers from different regions",
+        "Database design for the system",
+        "How would I design DNS",
+        "Design considerations for reliability, availability, and latency"
     ],
     "behavioralQuestions": [
+        "How did you handle asynchronous API calls and token refresh in your automation framework?",
         "What was the toughest situation that you encountered during your employment at your last company?",
-        "Tell me about yourself.",
-        "Why Apple?",
-        "Where do you see yourself in 5 years?",
-        "What are your strengths and weaknesses?"
+        "Can you briefly explain Principal Component Analysis (PCA)?"
     ],
     "difficulty": "Hard",
-    "avgRounds": 5,
+    "avgRounds": 3,
+    "enrichedInsights": "The interview process for Apple Software Engineers appears to be rigorous, involving multiple rounds focused on technical skills and problem-solving. Candidates emphasize the importance of thinking out loud, handling corner cases in coding problems, and thoroughly understanding their resume projects. System design rounds require a focus on reliability, availability, and latency, with discussions around database choices and core web concepts like DNS. While specific behavioral questions are scarce in the provided data, the emphasis on a strong thought process and resume knowledge suggests a holistic evaluation. The overall experience is described as challenging but rewarding, with successful candidates often highlighting perseverance and hard work as key factors.",
     "_sources": {
         "github": {
             "status": "ok",
             "chars": 2057
         },
         "web": {
-            "status": "empty",
-            "chars": 0
+            "status": "ok",
+            "chars": 8581
         },
         "reddit": {
             "status": "ok",
-            "chars": 45468
+            "chars": 11047
         },
         "ambitionbox": {
-            "status": "ok",
-            "chars": 15133
+            "status": "skipped",
+            "chars": 0
         }
     }
 }

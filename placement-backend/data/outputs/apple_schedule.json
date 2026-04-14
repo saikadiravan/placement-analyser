@@ -1,0 +1,753 @@
+{
+    "company": "Apple",
+    "role": "Software Engineer",
+    "total_days": 30,
+    "difficulty": "Hard",
+    "schedule": [
+        {
+            "day": 1,
+            "focus": "DSA: Array & Two Pointers - Foundation",
+            "tasks": [
+                {
+                    "title": "Two Sum",
+                    "category": "dsa",
+                    "id": "d1_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Maximum Subarray",
+                    "category": "dsa",
+                    "id": "d1_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Spiral Matrix",
+                    "category": "dsa",
+                    "id": "d1_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Product of Array Except Self",
+                    "category": "dsa",
+                    "id": "d1_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "Start strong by mastering fundamental array manipulation techniques, as interviewers at Apple often look for a solid grasp of basic data structures.",
+            "date": "2026-04-11"
+        },
+        {
+            "day": 2,
+            "focus": "DSA: Linked Lists - Foundation",
+            "tasks": [
+                {
+                    "title": "Add Two Numbers",
+                    "category": "dsa",
+                    "id": "d2_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Reverse Linked List",
+                    "category": "dsa",
+                    "id": "d2_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Merge Two Sorted Lists",
+                    "category": "dsa",
+                    "id": "d2_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Practice linked list problems diligently; Apple engineers are expected to handle pointer manipulation and edge cases with precision.",
+            "date": "2026-04-12"
+        },
+        {
+            "day": 3,
+            "focus": "DSA: Strings & Hash Maps - Foundation",
+            "tasks": [
+                {
+                    "title": "Longest Substring Without Repeating Characters",
+                    "category": "dsa",
+                    "id": "d3_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Valid Anagram",
+                    "category": "dsa",
+                    "id": "d3_t2",
+                    "completed": false
+                },
+                {
+                    "title": "First Unique Character in a String",
+                    "category": "dsa",
+                    "id": "d3_t3",
+                    "completed": false
+                },
+                {
+                    "title": "String to Integer (atoi)",
+                    "category": "dsa",
+                    "id": "d3_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "Focus on efficient string parsing and manipulation; Apple values candidates who can handle complex string algorithms and edge cases gracefully.",
+            "date": "2026-04-13"
+        },
+        {
+            "day": 4,
+            "focus": "DSA: Trees - Foundation",
+            "tasks": [
+                {
+                    "title": "Valid Parentheses",
+                    "category": "dsa",
+                    "id": "d4_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Flatten Nested List Iterator",
+                    "category": "dsa",
+                    "id": "d4_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Peeking Iterator",
+                    "category": "dsa",
+                    "id": "d4_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Tree traversal and manipulation are core skills; ensure you can articulate your thought process clearly for these recursive or iterative solutions, a trait Apple interviewers appreciate.",
+            "date": "2026-04-14"
+        },
+        {
+            "day": 5,
+            "focus": "DSA: Recursion & Backtracking - Foundation",
+            "tasks": [
+                {
+                    "title": "Letter Combinations of a Phone Number",
+                    "category": "dsa",
+                    "id": "d5_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Word Break",
+                    "category": "dsa",
+                    "id": "d5_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Number of Islands",
+                    "category": "dsa",
+                    "id": "d5_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Master recursive thinking and backtracking; Apple often presents problems that require exploring multiple paths and choices.",
+            "date": "2026-04-15"
+        },
+        {
+            "day": 6,
+            "focus": "DSA: Sorting & Searching - Foundation",
+            "tasks": [
+                {
+                    "title": "Search in Rotated Sorted Array",
+                    "category": "dsa",
+                    "id": "d6_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Median of Two Sorted Arrays",
+                    "category": "dsa",
+                    "id": "d6_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Merge k Sorted Lists",
+                    "category": "dsa",
+                    "id": "d6_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Solidify your understanding of binary search and merging sorted data, as efficiency is paramount in Apple's engineering culture.",
+            "date": "2026-04-16"
+        },
+        {
+            "day": 7,
+            "focus": "DSA: Sliding Window - Foundation",
+            "tasks": [
+                {
+                    "title": "Longest Substring Without Repeating Characters",
+                    "category": "dsa",
+                    "id": "d7_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Sliding Window Maximum",
+                    "category": "dsa",
+                    "id": "d7_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Find All Anagrams in a String",
+                    "category": "dsa",
+                    "id": "d7_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "The sliding window technique is frequently tested; practice identifying patterns where a window can efficiently track relevant data, a skill valued by Apple.",
+            "date": "2026-04-17"
+        },
+        {
+            "day": 8,
+            "focus": "DSA: Greedy Algorithms - Foundation",
+            "tasks": [
+                {
+                    "title": "Best Time to Buy and Sell Stock",
+                    "category": "dsa",
+                    "id": "d8_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Trapping Rain Water",
+                    "category": "dsa",
+                    "id": "d8_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Frog Jump",
+                    "category": "dsa",
+                    "id": "d8_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Greedy approaches can often lead to elegant solutions; ensure you can justify your greedy choices and handle edge cases, as Apple values clear reasoning.",
+            "date": "2026-04-18"
+        },
+        {
+            "day": 9,
+            "focus": "DSA: Basic Math & Bit Manipulation - Foundation",
+            "tasks": [
+                {
+                    "title": "Reverse Integer",
+                    "category": "dsa",
+                    "id": "d9_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Count Primes",
+                    "category": "dsa",
+                    "id": "d9_t2",
+                    "completed": false
+                },
+                {
+                    "title": "UTF-8 Validation",
+                    "category": "dsa",
+                    "id": "d9_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Fizz Buzz",
+                    "category": "dsa",
+                    "id": "d9_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "Brush up on fundamental mathematical concepts and bitwise operations; Apple's focus on low-level efficiency means these can be surprisingly relevant.",
+            "date": "2026-04-19"
+        },
+        {
+            "day": 10,
+            "focus": "DSA: Dynamic Programming - Foundation",
+            "tasks": [
+                {
+                    "title": "Maximum Subarray",
+                    "category": "dsa",
+                    "id": "d10_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Climbing Stairs",
+                    "category": "dsa",
+                    "id": "d10_t2",
+                    "completed": false
+                },
+                {
+                    "title": "House Robber",
+                    "category": "dsa",
+                    "id": "d10_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Begin your DP journey by understanding the core concepts of overlapping subproblems and optimal substructure; Apple interviewers often probe DP understanding.",
+            "date": "2026-04-20"
+        },
+        {
+            "day": 11,
+            "focus": "DSA: Deeper DP & Graphs - Phase 2",
+            "tasks": [
+                {
+                    "title": "Longest Increasing Path in a Matrix",
+                    "category": "dsa",
+                    "id": "d11_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Word Break",
+                    "category": "dsa",
+                    "id": "d11_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Alien Dictionary",
+                    "category": "dsa",
+                    "id": "d11_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Tackle more complex DP problems and introduce graph concepts; Apple expects candidates to have a robust approach to problem-solving that scales to harder challenges.",
+            "date": "2026-04-21"
+        },
+        {
+            "day": 12,
+            "focus": "DSA: Advanced Trees & Heaps - Phase 2",
+            "tasks": [
+                {
+                    "title": "Serialize and Deserialize N-ary Tree",
+                    "category": "dsa",
+                    "id": "d12_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Find Median from Data Stream",
+                    "category": "dsa",
+                    "id": "d12_t2",
+                    "completed": false
+                },
+                {
+                    "title": "LRU Cache",
+                    "category": "dsa",
+                    "id": "d12_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Focus on data structures like heaps and advanced tree implementations; design-oriented problems at Apple often involve these efficiently.",
+            "date": "2026-04-22"
+        },
+        {
+            "day": 13,
+            "focus": "DSA: Graphs (BFS/DFS) & Backtracking - Phase 2",
+            "tasks": [
+                {
+                    "title": "Number of Islands",
+                    "category": "dsa",
+                    "id": "d13_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Word Search II",
+                    "category": "dsa",
+                    "id": "d13_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Android Unlock Patterns",
+                    "category": "dsa",
+                    "id": "d13_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Practice graph traversal algorithms (BFS/DFS) and backtracking for combinatorial problems; clarity in explaining your exploration strategy is key for Apple.",
+            "date": "2026-04-23"
+        },
+        {
+            "day": 14,
+            "focus": "DSA: Complex Array/String Problems - Phase 2",
+            "tasks": [
+                {
+                    "title": "Longest Palindromic Substring",
+                    "category": "dsa",
+                    "id": "d14_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Interleaving String",
+                    "category": "dsa",
+                    "id": "d14_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Perfect Rectangle",
+                    "category": "dsa",
+                    "id": "d14_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "These problems often combine multiple techniques; Apple interviewers will look for your ability to break down complex requirements into manageable algorithmic steps.",
+            "date": "2026-04-24"
+        },
+        {
+            "day": 15,
+            "focus": "System Design: Core Concepts",
+            "tasks": [
+                {
+                    "title": "Design considerations for reliability, availability, and latency",
+                    "category": "system-design",
+                    "id": "d15_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Database design for the system",
+                    "category": "system-design",
+                    "id": "d15_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Focus on the foundational principles of system design: reliability, availability, and latency, as Apple engineers are expected to build robust and scalable systems.",
+            "date": "2026-04-25"
+        },
+        {
+            "day": 16,
+            "focus": "System Design: Networking",
+            "tasks": [
+                {
+                    "title": "How would I design DNS",
+                    "category": "system-design",
+                    "id": "d16_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Understanding core web infrastructure like DNS is crucial; be prepared to discuss the trade-offs and components involved, reflecting Apple's emphasis on foundational knowledge.",
+            "date": "2026-04-26"
+        },
+        {
+            "day": 17,
+            "focus": "System Design: Application Design",
+            "tasks": [
+                {
+                    "title": "Design a game leaderboard displaying top rankers from different regions",
+                    "category": "system-design",
+                    "id": "d17_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Practice designing end-to-end systems, considering user experience and data management, as Apple values well-rounded engineers who can think about the entire product lifecycle.",
+            "date": "2026-04-27"
+        },
+        {
+            "day": 18,
+            "focus": "DSA: Hard Problems - Phase 2",
+            "tasks": [
+                {
+                    "title": "The Skyline Problem",
+                    "category": "dsa",
+                    "id": "d18_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Find in Mountain Array",
+                    "category": "dsa",
+                    "id": "d18_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Sparse Matrix Multiplication",
+                    "category": "dsa",
+                    "id": "d18_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Tackle these harder problems to push your boundaries; Apple's rigorous interviews often involve challenges that require creative application of algorithms.",
+            "date": "2026-04-28"
+        },
+        {
+            "day": 19,
+            "focus": "DSA: Mixed Bag - Phase 2",
+            "tasks": [
+                {
+                    "title": "Max Points on a Line",
+                    "category": "dsa",
+                    "id": "d19_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Group Anagrams",
+                    "category": "dsa",
+                    "id": "d19_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Merge Intervals",
+                    "category": "dsa",
+                    "id": "d19_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Review a mix of problem types; Apple seeks candidates who are versatile and can switch between different algorithmic paradigms efficiently.",
+            "date": "2026-04-29"
+        },
+        {
+            "day": 20,
+            "focus": "DSA: Miscellaneous Hard Problems - Phase 2",
+            "tasks": [
+                {
+                    "title": "Largest Palindrome Product",
+                    "category": "dsa",
+                    "id": "d20_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Happy Number",
+                    "category": "dsa",
+                    "id": "d20_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Concatenated Words",
+                    "category": "dsa",
+                    "id": "d20_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Continue honing your skills on challenging problems; remember that Apple values deep understanding and the ability to derive optimal solutions under pressure.",
+            "date": "2026-04-30"
+        },
+        {
+            "day": 21,
+            "focus": "Mock Interview 1",
+            "tasks": [
+                {
+                    "title": "Round 1: Coding round (50 minutes)",
+                    "category": "mock",
+                    "id": "d21_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Round 2: System design round (50 minutes)",
+                    "category": "mock",
+                    "id": "d21_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Simulate the real interview experience with a mock session; focus on thinking out loud and handling corner cases, as Apple interviewers closely observe your problem-solving process.",
+            "date": "2026-05-01"
+        },
+        {
+            "day": 22,
+            "focus": "Behavioral Questions",
+            "tasks": [
+                {
+                    "title": "How did you handle asynchronous API calls and token refresh in your automation framework?",
+                    "category": "behavioral",
+                    "id": "d22_t1",
+                    "completed": false
+                },
+                {
+                    "title": "What was the toughest situation that you encountered during your employment at your last company?",
+                    "category": "behavioral",
+                    "id": "d22_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Can you briefly explain Principal Component Analysis (PCA)?",
+                    "category": "behavioral",
+                    "id": "d22_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Prepare your answers for behavioral questions by reflecting on your experiences; Apple values self-awareness and the ability to articulate your contributions and learnings clearly.",
+            "date": "2026-05-02"
+        },
+        {
+            "day": 23,
+            "focus": "DSA: Polish & Edge Cases",
+            "tasks": [
+                {
+                    "title": "Zigzag Iterator",
+                    "category": "dsa",
+                    "id": "d23_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Knight Probability in Chessboard",
+                    "category": "dsa",
+                    "id": "d23_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Basic Calculator II",
+                    "category": "dsa",
+                    "id": "d23_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Revisit problems, focusing on identifying and handling all possible edge cases; this attention to detail is crucial for passing Apple's stringent technical bar.",
+            "date": "2026-05-03"
+        },
+        {
+            "day": 24,
+            "focus": "System Design: Advanced Concepts & Trade-offs",
+            "tasks": [
+                {
+                    "title": "Design considerations for reliability, availability, and latency",
+                    "category": "system-design",
+                    "id": "d24_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Database design for the system",
+                    "category": "system-design",
+                    "id": "d24_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Deepen your understanding of system design trade-offs; Apple engineers are expected to make informed decisions that balance various system requirements.",
+            "date": "2026-05-04"
+        },
+        {
+            "day": 25,
+            "focus": "DSA: Review - Arrays & Strings",
+            "tasks": [
+                {
+                    "title": "Two Sum",
+                    "category": "dsa",
+                    "id": "d25_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Longest Substring Without Repeating Characters",
+                    "category": "dsa",
+                    "id": "d25_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Product of Array Except Self",
+                    "category": "dsa",
+                    "id": "d25_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Spiral Matrix",
+                    "category": "dsa",
+                    "id": "d25_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "Review foundational array and string problems, focusing on optimal solutions and clear explanations, as mastery of these basics is expected by Apple.",
+            "date": "2026-05-05"
+        },
+        {
+            "day": 26,
+            "focus": "DSA: Review - Linked Lists & Trees",
+            "tasks": [
+                {
+                    "title": "Reverse Linked List",
+                    "category": "dsa",
+                    "id": "d26_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Merge Two Sorted Lists",
+                    "category": "dsa",
+                    "id": "d26_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Flatten Nested List Iterator",
+                    "category": "dsa",
+                    "id": "d26_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Reinforce your understanding of linked lists and trees, practicing variations and complex scenarios, as proficiency in these data structures is a hallmark of Apple engineers.",
+            "date": "2026-05-06"
+        },
+        {
+            "day": 27,
+            "focus": "DSA: Review - Graphs & DP",
+            "tasks": [
+                {
+                    "title": "Number of Islands",
+                    "category": "dsa",
+                    "id": "d27_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Word Break",
+                    "category": "dsa",
+                    "id": "d27_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Longest Increasing Path in a Matrix",
+                    "category": "dsa",
+                    "id": "d27_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Consolidate your knowledge of graph algorithms and dynamic programming; be prepared to explain your thought process for complex DP states or graph traversals, as Apple values deep analytical skills.",
+            "date": "2026-05-07"
+        },
+        {
+            "day": 28,
+            "focus": "Mock Interview 2",
+            "tasks": [
+                {
+                    "title": "Round 1: Coding round (50 minutes)",
+                    "category": "mock",
+                    "id": "d28_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Round 3: HR round (50 minutes)",
+                    "category": "mock",
+                    "id": "d28_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Conduct a final mock interview, including the HR round, to practice your communication and composure; Apple seeks candidates who can articulate their thoughts clearly and professionally.",
+            "date": "2026-05-08"
+        },
+        {
+            "day": 29,
+            "focus": "Resume Deep Dive & Project Review",
+            "tasks": [
+                {
+                    "title": "Thoroughly review all projects and experiences on your resume.",
+                    "category": "revision",
+                    "id": "d29_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Prepare to discuss technical details, challenges, and outcomes for each project.",
+                    "category": "revision",
+                    "id": "d29_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Be ready to dive deep into your resume projects; Apple places significant emphasis on understanding your past work and how you approach real-world engineering challenges.",
+            "date": "2026-05-09"
+        },
+        {
+            "day": 30,
+            "focus": "Final Revision & Strategy",
+            "tasks": [
+                {
+                    "title": "Review key concepts from all DSA and System Design topics.",
+                    "category": "revision",
+                    "id": "d30_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Mental preparation for interview day (focus, attitude, pacing).",
+                    "category": "revision",
+                    "id": "d30_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "On your final revision day, remember that perseverance is key; Apple interviews are challenging but rewarding, so approach them with confidence and a clear strategy.",
+            "date": "2026-05-10"
+        }
+    ],
+    "start_date": "2026-04-11"
+}
