@@ -12,16 +12,31 @@ const COLORS = ["hsl(238,73%,58%)", "hsl(200,85%,55%)", "hsl(152,60%,45%)"];
 
 export default function ProgressTracker() {
   const [plan, setPlan] = useState<StudyPlan | null>(null);
+  const [allPlans, setAllPlans] = useState<Record<string, any>>({});
 
   useEffect(() => {
-    const saved = localStorage.getItem("studyPlan");
-    if (saved) setPlan(JSON.parse(saved));
-  }, []);
+  const plans = JSON.parse(localStorage.getItem("studyPlansMap") || "{}");
+  const activeId = localStorage.getItem("activePlanId");
 
-  useEffect(() => {
-    if (plan) localStorage.setItem("studyPlan", JSON.stringify(plan));
-  }, [plan]);
+  setAllPlans(plans); // ✅ THIS IS STEP 2 (you were missing this)
 
+  if (activeId && plans[activeId]) {
+    setPlan(plans[activeId]);
+  }
+}, []);
+useEffect(() => {
+  const interval = setInterval(() => {
+    const plans = JSON.parse(localStorage.getItem("studyPlansMap") || "{}");
+    const activeId = localStorage.getItem("activePlanId");
+
+    if (activeId && plans[activeId]) {
+      setPlan(plans[activeId]);
+    }
+  }, 1000);
+
+  return () => clearInterval(interval);
+}, []);
+  
   const handleReschedule = () => {
     if (!plan) return;
     const { plan: updated, missedDays } = reschedule(plan);
@@ -33,6 +48,15 @@ export default function ProgressTracker() {
     }
   };
 
+  const handlePlanChange = (id: string) => {
+  const plans = JSON.parse(localStorage.getItem("studyPlansMap") || "{}");
+  
+  if (plans[id]) {
+    setPlan(plans[id]);
+    localStorage.setItem("activePlanId", id);
+  }
+};
+
   const stats = useMemo(() => {
     if (!plan) return null;
     const totalTasks = plan.schedule?.reduce((a, d) => a + d.tasks.length, 0) ?? 0;
@@ -40,10 +64,16 @@ export default function ProgressTracker() {
 
     // Streak
     let streak = 0;
-    for (let i = (plan.schedule?.length || 0) - 1; i >= 0; i--) {
-  if (plan.schedule[i].tasks.every((t) => t.completed) && plan.schedule[i].tasks.length > 0) streak++;
-      else break;
-    }
+
+for (let i = 0; i < (plan.schedule?.length || 0); i++) {
+  const day = plan.schedule[i];
+
+  if (day.tasks.length > 0 && day.tasks.every((t) => t.completed)) {
+    streak++;
+  } else {
+    break; // stop at first incomplete day
+  }
+}
 
     // Weekly progress
     const weeklyProgress = plan.schedule?.map((d) => ({
@@ -61,7 +91,7 @@ export default function ProgressTracker() {
       name: name === "dsa" ? "DSA" : name === "system-design" ? "System Design" : "Behavioral",
       value,
     }));
-
+    
     return { totalTasks, completed, streak, weeklyProgress, topicDist, progress: Math.round((completed / totalTasks) * 100) };
   }, [plan]);
 
@@ -78,11 +108,31 @@ export default function ProgressTracker() {
     );
   }
 
+const completedDays = plan.schedule.filter(
+  (d) => d.tasks.length > 0 && d.tasks.every((t) => t.completed)
+).length;
+const totalDays = (plan as any).duration ?? (plan as any).total_days ?? 0;
+
+const remainingDays = Math.max(totalDays - completedDays, 0);
+
   return (
     <div className="min-h-screen py-8">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-wrap items-end justify-between gap-4">
           <div>
+            <div className="mb-4">
+  <select
+    className="border rounded px-3 py-2 text-sm"
+    value={localStorage.getItem("activePlanId") || ""}
+    onChange={(e) => handlePlanChange(e.target.value)}
+  >
+    {Object.entries(allPlans).map(([id, p]: any) => (
+      <option key={id} value={id}>
+        {p.company} - {p.role}
+      </option>
+    ))}
+  </select>
+</div>
             <h1 className="text-3xl font-bold">Progress Tracker</h1>
             <p className="mt-2 text-muted-foreground">{plan.company} • {plan.role} • {plan.duration}-day plan</p>
           </div>
@@ -97,7 +147,7 @@ export default function ProgressTracker() {
             { label: "Overall Progress", value: `${stats.progress}%`, icon: CheckCircle2, color: "text-primary" },
             { label: "Tasks Completed", value: `${stats.completed}/${stats.totalTasks}`, icon: Trophy, color: "text-accent" },
             { label: "Current Streak", value: `${stats.streak} days`, icon: Flame, color: "text-streak" },
-            { label: "Days Remaining", value: `${plan.duration - (plan.schedule?.filter((d) => d.tasks.every((t) => t.completed)).length || 0)}`, icon: Calendar, color: "text-muted-foreground" },
+            { label: "Days Remaining", value: `${remainingDays}`, icon: Calendar, color: "text-muted-foreground" },
           ].map((s, i) => (
             <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }}
               className="glass-card rounded-xl p-5">

@@ -76,10 +76,11 @@ export default function StudyPlanGenerator() {
     
     // 1. Read existing files to save Gemini API Key usage!
     if (savedPlans[planId]) {
-      toast.info(`Loaded existing plan for ${company} to save API quota.`);
-      setActivePlanId(planId);
-      return;
-    }
+  toast.info(`Loaded existing plan for ${company} to save API quota.`);
+  setActivePlanId(planId);
+  localStorage.setItem("activePlanId", planId); // ✅ ADD THIS
+  return;
+}
 
     // 2. Call the backend if no local plan exists
     setIsGenerating(true);
@@ -96,6 +97,7 @@ export default function StudyPlanGenerator() {
         const updatedPlans = { ...savedPlans, [planId]: data.data };
         saveToStorage(updatedPlans);
         setActivePlanId(planId);
+        localStorage.setItem("activePlanId", planId); // ✅ ADD THIS
         toast.success("AI Study Plan generated successfully!");
       } else {
         toast.error("Failed to generate plan. Check backend logs.");
@@ -242,7 +244,10 @@ export default function StudyPlanGenerator() {
                               <Trash2 className="h-4 w-4" />
                             </Button>
                           </div>
-                          <Button className="w-full" onClick={() => setActivePlanId(id)}>
+                          <Button className="w-full" onClick={() => {
+  setActivePlanId(id);
+  localStorage.setItem("activePlanId", id); // ✅ ADD
+}}>
                             Resume Plan
                           </Button>
                         </div>
