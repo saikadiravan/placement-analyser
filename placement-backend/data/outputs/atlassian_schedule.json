@@ -1,0 +1,549 @@
+{
+    "company": "atlassian",
+    "role": "sde",
+    "total_days": 21,
+    "difficulty": "Medium",
+    "schedule": [
+        {
+            "day": 1,
+            "focus": "DSA: Arrays & String Manipulation (Basics)",
+            "tasks": [
+                {
+                    "title": "Nearest Smaller Element to Left/Right",
+                    "category": "dsa",
+                    "id": "d1_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Greatest Common Divisor of Strings",
+                    "category": "dsa",
+                    "id": "d1_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Valid Palindrome II",
+                    "category": "dsa",
+                    "id": "d1_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Shortest Distance to a Character",
+                    "category": "dsa",
+                    "id": "d1_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "Remember to clearly articulate your thought process when solving array manipulation problems, as Atlassian interviewers highly value systematic problem-solving approaches.",
+            "date": "2026-04-21"
+        },
+        {
+            "day": 2,
+            "focus": "DSA: Linked Lists & Basic Tree Traversal",
+            "tasks": [
+                {
+                    "title": "Merge Two Sorted Lists",
+                    "category": "dsa",
+                    "id": "d2_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Binary Tree Level Order Traversal",
+                    "category": "dsa",
+                    "id": "d2_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Find Leaves of Binary Tree",
+                    "category": "dsa",
+                    "id": "d2_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Leaf-Similar Trees",
+                    "category": "dsa",
+                    "id": "d2_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "When discussing tree traversal problems, highlight your ability to handle edge cases, a key aspect Atlassian aims to assess in candidates.",
+            "date": "2026-04-22"
+        },
+        {
+            "day": 3,
+            "focus": "DSA: Stacks & Queues",
+            "tasks": [
+                {
+                    "title": "Valid Parentheses",
+                    "category": "dsa",
+                    "id": "d3_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Evaluate Reverse Polish Notation",
+                    "category": "dsa",
+                    "id": "d3_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Merge k Sorted Lists",
+                    "category": "dsa",
+                    "id": "d3_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Logger Rate Limiter",
+                    "category": "dsa",
+                    "id": "d3_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "For problems involving data structures like stacks and queues, demonstrating your debugging skills by stepping through your solution mentally is crucial, as Atlassian looks for this proficiency.",
+            "date": "2026-04-23"
+        },
+        {
+            "day": 4,
+            "focus": "DSA: Binary Search & Related Problems",
+            "tasks": [
+                {
+                    "title": "Single Element in a Sorted Array",
+                    "category": "dsa",
+                    "id": "d4_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Binary Search Tree Iterator",
+                    "category": "dsa",
+                    "id": "d4_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Insert into a Binary Search Tree",
+                    "category": "dsa",
+                    "id": "d4_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Validate Binary Search Tree",
+                    "category": "dsa",
+                    "id": "d4_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "When tackling binary search problems, clearly explaining the time complexity of your approach will align with Atlassian's focus on technical depth and understanding of algorithms.",
+            "date": "2026-04-24"
+        },
+        {
+            "day": 5,
+            "focus": "DSA: String Manipulation & Backtracking",
+            "tasks": [
+                {
+                    "title": "Letter Combinations of a Phone Number",
+                    "category": "dsa",
+                    "id": "d5_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Generate Parentheses",
+                    "category": "dsa",
+                    "id": "d5_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Decode String",
+                    "category": "dsa",
+                    "id": "d5_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Palindromic Substrings",
+                    "category": "dsa",
+                    "id": "d5_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "For backtracking problems like generating combinations or permutations, verbally walk through your recursive calls; Atlassian values clear communication of your problem-solving strategy.",
+            "date": "2026-04-25"
+        },
+        {
+            "day": 6,
+            "focus": "DSA: Trees & Graphs (DFS/BFS)",
+            "tasks": [
+                {
+                    "title": "Number of Islands",
+                    "category": "dsa",
+                    "id": "d6_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Friend Circles",
+                    "category": "dsa",
+                    "id": "d6_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Binary Tree Right Side View",
+                    "category": "dsa",
+                    "id": "d6_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Lowest Common Ancestor of a Binary Tree",
+                    "category": "dsa",
+                    "id": "d6_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "When solving graph problems, discuss how you'd adapt your algorithm for different graph representations (adjacency list vs. matrix), reflecting the detailed technical discussions Atlassian encourages.",
+            "date": "2026-04-26"
+        },
+        {
+            "day": 7,
+            "focus": "DSA: Dynamic Programming (Intro)",
+            "tasks": [
+                {
+                    "title": "Longest Increasing Subsequence",
+                    "category": "dsa",
+                    "id": "d7_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Maximum Subarray",
+                    "category": "dsa",
+                    "id": "d7_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Best Time to Buy and Sell Stock",
+                    "category": "dsa",
+                    "id": "d7_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Lemonade Change",
+                    "category": "dsa",
+                    "id": "d7_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "For DP problems, explain the state transitions clearly. Atlassian interviewers are keen to understand your ability to break down problems into smaller, manageable subproblems.",
+            "date": "2026-04-27"
+        },
+        {
+            "day": 8,
+            "focus": "System Design & Advanced DSA",
+            "tasks": [
+                {
+                    "title": "Design Hit Counter",
+                    "category": "system-design",
+                    "id": "d8_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Design HashMap",
+                    "category": "system-design",
+                    "id": "d8_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Time Based Key-Value Store",
+                    "category": "dsa",
+                    "id": "d8_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "When designing systems like a Hit Counter or HashMap, consider scalability and trade-offs. Atlassian values candidates who can discuss practical engineering considerations beyond just functional correctness.",
+            "date": "2026-04-28"
+        },
+        {
+            "day": 9,
+            "focus": "DSA: Advanced Array/Greedy",
+            "tasks": [
+                {
+                    "title": "Meeting Rooms II",
+                    "category": "dsa",
+                    "id": "d9_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Best Time to Buy and Sell Stock III",
+                    "category": "dsa",
+                    "id": "d9_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Subarray Product Less Than K",
+                    "category": "dsa",
+                    "id": "d9_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Random Pick with Weight",
+                    "category": "dsa",
+                    "id": "d9_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "For greedy problems, clearly articulate why your chosen approach is optimal. Atlassian seeks candidates who can provide sound justifications for their algorithmic choices.",
+            "date": "2026-04-29"
+        },
+        {
+            "day": 10,
+            "focus": "DSA: More Trees & Iterators",
+            "tasks": [
+                {
+                    "title": "Symmetric Tree",
+                    "category": "dsa",
+                    "id": "d10_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Flatten Nested List Iterator",
+                    "category": "dsa",
+                    "id": "d10_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Peeking Iterator",
+                    "category": "dsa",
+                    "id": "d10_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Diameter of Binary Tree",
+                    "category": "dsa",
+                    "id": "d10_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "When working with iterators, think about memory management and lazy evaluation. Atlassian interviews often probe into these lower-level implementation details.",
+            "date": "2026-04-30"
+        },
+        {
+            "day": 11,
+            "focus": "DSA: Permutations & Subsets",
+            "tasks": [
+                {
+                    "title": "Permutations",
+                    "category": "dsa",
+                    "id": "d11_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Subsets",
+                    "category": "dsa",
+                    "id": "d11_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Next Permutation",
+                    "category": "dsa",
+                    "id": "d11_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Rank Teams by Votes",
+                    "category": "dsa",
+                    "id": "d11_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "For problems involving permutations and subsets, ensure you handle duplicate elements correctly if they arise. Atlassian values thoroughness in addressing all possible scenarios.",
+            "date": "2026-05-01"
+        },
+        {
+            "day": 12,
+            "focus": "System Design & Advanced DP",
+            "tasks": [
+                {
+                    "title": "Determine if a new booking can reuse an existing court or requires a new one given infinite courts and their booking times.",
+                    "category": "system-design",
+                    "id": "d12_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Find Median from Data Stream",
+                    "category": "dsa",
+                    "id": "d12_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Kth Largest Element in an Array",
+                    "category": "dsa",
+                    "id": "d12_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "When discussing the court booking system, focus on defining clear APIs and data structures. Atlassian emphasizes practical design choices that lead to maintainable systems.",
+            "date": "2026-05-02"
+        },
+        {
+            "day": 13,
+            "focus": "DSA: Miscellaneous Medium",
+            "tasks": [
+                {
+                    "title": "Longest Substring Without Repeating Characters",
+                    "category": "dsa",
+                    "id": "d13_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Top K Frequent Words",
+                    "category": "dsa",
+                    "id": "d13_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Dice Roll Simulation",
+                    "category": "dsa",
+                    "id": "d13_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Single Number",
+                    "category": "dsa",
+                    "id": "d13_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "For problems requiring efficient lookups or frequency counts, be prepared to discuss the trade-offs between different data structures (e.g., hash maps vs. trees). Atlassian interviews often explore these trade-offs.",
+            "date": "2026-05-03"
+        },
+        {
+            "day": 14,
+            "focus": "DSA: More Graphs & Bit Manipulation",
+            "tasks": [
+                {
+                    "title": "Verbal Arithmetic Puzzle",
+                    "category": "dsa",
+                    "id": "d14_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Winner of an election where votes are represented as candidate names",
+                    "category": "dsa",
+                    "id": "d14_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Maximum Average Subtree",
+                    "category": "dsa",
+                    "id": "d14_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "When tackling complex problems like verbal arithmetic puzzles, break them down systematically and explain your constraint satisfaction logic. Atlassian values structured thinking for intricate problems.",
+            "date": "2026-05-04"
+        },
+        {
+            "day": 15,
+            "focus": "Mock Interview 1",
+            "tasks": [
+                {
+                    "title": "Mock Interview Practice",
+                    "category": "mock",
+                    "id": "d15_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "During your mock interviews, pay close attention to how you respond to follow-up questions and how clearly you can explain your approach under pressure, mirroring the direct questioning style Atlassian interviewers might employ.",
+            "date": "2026-05-05"
+        },
+        {
+            "day": 16,
+            "focus": "Mock Interview 2",
+            "tasks": [
+                {
+                    "title": "Mock Interview Practice",
+                    "category": "mock",
+                    "id": "d16_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "After your mock interviews, reflect on instances where you might have rushed or overlooked edge cases. Atlassian interviews are structured to assess this very thoroughness and attention to detail.",
+            "date": "2026-05-06"
+        },
+        {
+            "day": 17,
+            "focus": "Behavioral & Project Deep Dive",
+            "tasks": [
+                {
+                    "title": "Behavioral Question Preparation",
+                    "category": "behavioral",
+                    "id": "d17_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Prepare to discuss your past projects in detail, focusing on technical challenges and solutions. Atlassian interviewers often use this to gauge your technical depth and problem-solving experience.",
+            "date": "2026-05-07"
+        },
+        {
+            "day": 18,
+            "focus": "System Design: Deeper Dive",
+            "tasks": [
+                {
+                    "title": "Design Hit Counter (Advanced)",
+                    "category": "system-design",
+                    "id": "d18_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Design HashMap (Advanced)",
+                    "category": "system-design",
+                    "id": "d18_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "For system design questions, be ready to discuss different caching strategies or trade-offs in data storage. Atlassian values candidates who can think critically about engineering decisions.",
+            "date": "2026-05-08"
+        },
+        {
+            "day": 19,
+            "focus": "Online Assessment Simulation",
+            "tasks": [
+                {
+                    "title": "Simulated Atlassian Online Test (90 mins, 3 problems)",
+                    "category": "dsa",
+                    "id": "d19_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Practice solving problems under timed conditions, similar to the 90-minute Hackerrank test. Atlassian's online assessment is a critical filter, so managing your time effectively is key.",
+            "date": "2026-05-09"
+        },
+        {
+            "day": 20,
+            "focus": "Targeted Revision & Weak Areas",
+            "tasks": [
+                {
+                    "title": "Review of all covered DSA topics",
+                    "category": "dsa",
+                    "id": "d20_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Review of System Design concepts",
+                    "category": "system-design",
+                    "id": "d20_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Focus your revision on areas where you felt least confident. Atlassian aims to assess a broad range of skills, so shoring up weaker areas is crucial for a well-rounded performance.",
+            "date": "2026-05-10"
+        },
+        {
+            "day": 21,
+            "focus": "Final Polish & Mindset",
+            "tasks": [
+                {
+                    "title": "Final Review of Key Concepts",
+                    "category": "revision",
+                    "id": "d21_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "On your interview day, remember to stay calm and communicate your thought process clearly. Atlassian interviewers are looking for problem-solving ability and how you approach challenges, not just the final answer.",
+            "date": "2026-05-11"
+        }
+    ],
+    "start_date": "2026-04-21"
+}

@@ -1,18 +1,21 @@
 {
     "company": "Infosys",
-    "role": "system engineer",
+    "role": "SDE",
     "interviewProcess": [
-        "Round 1: Online Assessment Test (MCQs, 2 programming questions, no aptitude questions, 65% qualifying percentage)",
-        "Round 2: HR interview (behavioral, questions from resume including family background, interests, project)"
+        "Round 1: Online Assessment Test (MCQs, 2 programming questions)",
+        "Round 2: HR interview (behavioral)"
     ],
     "dsaTopics": [],
     "systemDesignTopics": [],
     "behavioralQuestions": [
-        "Tell me about yourself"
+        "Tell me about yourself",
+        "What are the OOPS concepts?",
+        "What is the difference between Ctrl+Z and Ctrl+C?",
+        "Describe your experience using Tosca and its common applications."
     ],
     "difficulty": "Easy",
     "avgRounds": 2,
-    "enrichedInsights": "Infosys appears to have a structured recruitment process, starting with an online assessment that includes programming questions and logical reasoning, followed by a behavioral HR interview. Candidates are advised to focus on their resume content, projects, and general background. The interview process seems geared towards assessing foundational knowledge and fit within the company.  For experienced candidates, there might be additional technical rounds. The company values a minimum academic percentage and emphasizes both technical and behavioral aspects in its evaluation.",
+    "enrichedInsights": "Infosys's interview process for SDE roles appears to be a two-round affair, starting with an online assessment that includes MCQs and programming questions, followed by a behavioral HR interview. The online assessment requires a qualifying percentage of 65%. Behavioral questions often delve into personal background, interests, and projects from the resume. While specific DSA or system design topics are not explicitly detailed in the provided data for Infosys, general advice from other platforms suggests a focus on foundational concepts. The overall candidate experience seems to be geared towards assessing both technical aptitude through assessments and behavioral fit through the HR round. Common questions include 'Tell me about yourself' and OOPS concepts, indicating a need for candidates to be well-versed in core programming principles and able to articulate their experiences.",
     "_sources": {
         "github": {
             "status": "failed",
@@ -24,7 +27,7 @@
         },
         "reddit": {
             "status": "ok",
-            "chars": 27802
+            "chars": 37777
         },
         "ambitionbox": {
             "status": "skipped",

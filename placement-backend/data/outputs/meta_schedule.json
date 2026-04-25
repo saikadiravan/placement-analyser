@@ -1,0 +1,507 @@
+{
+    "company": "Meta",
+    "role": "Frontend Engineer",
+    "total_days": 30,
+    "difficulty": "Hard",
+    "schedule": [
+        {
+            "day": 1,
+            "focus": "DSA Foundation: Two Pointers",
+            "tasks": [
+                {
+                    "title": "Three Sum",
+                    "category": "dsa",
+                    "id": "d1_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Meta interviewers are looking for your ability to break down complex problems, so start by understanding the core logic of Two Pointers for 'Three Sum'.",
+            "date": "2026-04-26"
+        },
+        {
+            "day": 2,
+            "focus": "DSA Foundation: Sorting and Searching",
+            "tasks": [
+                {
+                    "title": "Kth Largest Element in an Array",
+                    "category": "dsa",
+                    "id": "d2_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "For the 'Kth Largest Element in an Array', focus on efficient sorting and selection algorithms, as Meta values optimized solutions.",
+            "date": "2026-04-27"
+        },
+        {
+            "day": 3,
+            "focus": "DSA: Exploring Variations",
+            "tasks": [
+                {
+                    "title": "Three Sum",
+                    "category": "dsa",
+                    "id": "d3_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Kth Largest Element in an Array",
+                    "category": "dsa",
+                    "id": "d3_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Revisit 'Three Sum' and 'Kth Largest Element in an Array' to solidify your understanding of their different approaches and edge cases, a key aspect Meta looks for.",
+            "date": "2026-04-28"
+        },
+        {
+            "day": 4,
+            "focus": "System Design Fundamentals",
+            "tasks": [
+                {
+                    "title": "Design a search product like Facebook",
+                    "category": "system-design",
+                    "id": "d4_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "When tackling 'Design a search product like Facebook', think about scalability and user experience, which are core to Meta's product development philosophy.",
+            "date": "2026-04-29"
+        },
+        {
+            "day": 5,
+            "focus": "Behavioral Preparation: Past Experiences",
+            "tasks": [
+                {
+                    "title": "Tell me about a time you failed.",
+                    "category": "behavioral",
+                    "id": "d5_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Tell me about a challenge you faced and how you overcame it.",
+                    "category": "behavioral",
+                    "id": "d5_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Meta values candidates who can demonstrate resilience and a growth mindset, so prepare specific examples for failure and overcoming challenges.",
+            "date": "2026-04-30"
+        },
+        {
+            "day": 6,
+            "focus": "Behavioral Preparation: Motivation and Future",
+            "tasks": [
+                {
+                    "title": "Why Meta?",
+                    "category": "behavioral",
+                    "id": "d6_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Where do you see yourself in 5 years?",
+                    "category": "behavioral",
+                    "id": "d6_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Articulate a genuine interest in Meta's mission and a clear vision for your career growth, reflecting the company's focus on long-term impact.",
+            "date": "2026-05-01"
+        },
+        {
+            "day": 7,
+            "focus": "Behavioral Preparation: Teamwork",
+            "tasks": [
+                {
+                    "title": "How do you handle conflict with a team member?",
+                    "category": "behavioral",
+                    "id": "d7_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Demonstrate your ability to collaborate constructively and resolve disagreements professionally, a crucial skill for Meta's collaborative environment.",
+            "date": "2026-05-02"
+        },
+        {
+            "day": 8,
+            "focus": "DSA Depth: Optimization",
+            "tasks": [
+                {
+                    "title": "Three Sum",
+                    "category": "dsa",
+                    "id": "d8_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Consider how to optimize your solution for 'Three Sum' to handle larger datasets, reflecting Meta's emphasis on performance.",
+            "date": "2026-05-03"
+        },
+        {
+            "day": 9,
+            "focus": "DSA Depth: Edge Cases",
+            "tasks": [
+                {
+                    "title": "Kth Largest Element in an Array",
+                    "category": "dsa",
+                    "id": "d9_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Explore the edge cases for 'Kth Largest Element in an Array', such as duplicate numbers or empty arrays, as thoroughness is valued in Meta interviews.",
+            "date": "2026-05-04"
+        },
+        {
+            "day": 10,
+            "focus": "System Design: Core Components",
+            "tasks": [
+                {
+                    "title": "Design a search product like Facebook",
+                    "category": "system-design",
+                    "id": "d10_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "For 'Design a search product like Facebook', break down the system into key components like indexing, ranking, and query processing, showing a structured approach.",
+            "date": "2026-05-05"
+        },
+        {
+            "day": 11,
+            "focus": "System Design: Scalability and Performance",
+            "tasks": [
+                {
+                    "title": "Design a search product like Facebook",
+                    "category": "system-design",
+                    "id": "d11_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Focus on how to scale 'Design a search product like Facebook' to handle millions of users and queries, a critical consideration for Meta.",
+            "date": "2026-05-06"
+        },
+        {
+            "day": 12,
+            "focus": "DSA: Advanced Techniques",
+            "tasks": [
+                {
+                    "title": "Three Sum",
+                    "category": "dsa",
+                    "id": "d12_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Think about alternative approaches for 'Three Sum' that might not be immediately obvious, showcasing your problem-solving creativity.",
+            "date": "2026-05-07"
+        },
+        {
+            "day": 13,
+            "focus": "DSA: Data Structures",
+            "tasks": [
+                {
+                    "title": "Kth Largest Element in an Array",
+                    "category": "dsa",
+                    "id": "d13_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Explore how different data structures, like heaps or quickselect, can efficiently solve 'Kth Largest Element in an Array', aligning with Meta's focus on efficient data handling.",
+            "date": "2026-05-08"
+        },
+        {
+            "day": 14,
+            "focus": "System Design: Trade-offs",
+            "tasks": [
+                {
+                    "title": "Design a search product like Facebook",
+                    "category": "system-design",
+                    "id": "d14_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "When discussing 'Design a search product like Facebook', be prepared to articulate the trade-offs of your design choices, demonstrating critical thinking.",
+            "date": "2026-05-09"
+        },
+        {
+            "day": 15,
+            "focus": "Behavioral: STAR Method Practice",
+            "tasks": [
+                {
+                    "title": "Tell me about a time you failed.",
+                    "category": "behavioral",
+                    "id": "d15_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Tell me about a challenge you faced and how you overcame it.",
+                    "category": "behavioral",
+                    "id": "d15_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Structure your behavioral answers for failure and challenges using the STAR method (Situation, Task, Action, Result), a technique often favored by interviewers to elicit clear and concise stories.",
+            "date": "2026-05-10"
+        },
+        {
+            "day": 16,
+            "focus": "Behavioral: Company Alignment",
+            "tasks": [
+                {
+                    "title": "Why Meta?",
+                    "category": "behavioral",
+                    "id": "d16_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Research Meta's recent product launches and engineering challenges to provide a specific and compelling answer to 'Why Meta?', demonstrating genuine interest beyond generic reasons.",
+            "date": "2026-05-11"
+        },
+        {
+            "day": 17,
+            "focus": "Behavioral: Team Dynamics",
+            "tasks": [
+                {
+                    "title": "How do you handle conflict with a team member?",
+                    "category": "behavioral",
+                    "id": "d17_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "For conflict resolution, emphasize proactive communication and finding mutually beneficial solutions, reflecting Meta's collaborative culture and emphasis on healthy team dynamics.",
+            "date": "2026-05-12"
+        },
+        {
+            "day": 18,
+            "focus": "DSA: Problem Synthesis",
+            "tasks": [
+                {
+                    "title": "Three Sum",
+                    "category": "dsa",
+                    "id": "d18_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Kth Largest Element in an Array",
+                    "category": "dsa",
+                    "id": "d18_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Consider how the principles used in 'Three Sum' and 'Kth Largest Element in an Array' might be combined or adapted for more complex problems, showing your ability to generalize.",
+            "date": "2026-05-13"
+        },
+        {
+            "day": 19,
+            "focus": "System Design: Data Modeling",
+            "tasks": [
+                {
+                    "title": "Design a search product like Facebook",
+                    "category": "system-design",
+                    "id": "d19_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "In 'Design a search product like Facebook', detail the data models for storing and retrieving search data, which is a fundamental aspect of any search system.",
+            "date": "2026-05-14"
+        },
+        {
+            "day": 20,
+            "focus": "Behavioral: Long-term Vision",
+            "tasks": [
+                {
+                    "title": "Where do you see yourself in 5 years?",
+                    "category": "behavioral",
+                    "id": "d20_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Align your 5-year goals with Meta's growth opportunities and impact areas, showing that you've considered how your career can contribute to the company's broader objectives.",
+            "date": "2026-05-15"
+        },
+        {
+            "day": 21,
+            "focus": "Mock Interview: Coding Round",
+            "tasks": [
+                {
+                    "title": "Three Sum",
+                    "category": "mock",
+                    "id": "d21_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Kth Largest Element in an Array",
+                    "category": "mock",
+                    "id": "d21_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "During your mock coding interview, focus on clear communication of your thought process and consider various test cases, mirroring how Meta interviewers assess problem-solving skills.",
+            "date": "2026-05-16"
+        },
+        {
+            "day": 22,
+            "focus": "Mock Interview: System Design Round",
+            "tasks": [
+                {
+                    "title": "Design a search product like Facebook",
+                    "category": "mock",
+                    "id": "d22_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "In your mock system design, practice diagramming and explaining your approach to 'Design a search product like Facebook' as if you were in the actual interview, paying attention to clarity and completeness.",
+            "date": "2026-05-17"
+        },
+        {
+            "day": 23,
+            "focus": "Behavioral Deep Dive",
+            "tasks": [
+                {
+                    "title": "Tell me about a time you failed.",
+                    "category": "behavioral",
+                    "id": "d23_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Why Meta?",
+                    "category": "behavioral",
+                    "id": "d23_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Tell me about a challenge you faced and how you overcame it.",
+                    "category": "behavioral",
+                    "id": "d23_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Where do you see yourself in 5 years?",
+                    "category": "behavioral",
+                    "id": "d23_t4",
+                    "completed": false
+                },
+                {
+                    "title": "How do you handle conflict with a team member?",
+                    "category": "behavioral",
+                    "id": "d23_t5",
+                    "completed": false
+                }
+            ],
+            "tip": "Practice answering all behavioral questions concisely and with strong, relevant examples, as Meta interviewers are keen to understand your past behavior to predict future performance.",
+            "date": "2026-05-18"
+        },
+        {
+            "day": 24,
+            "focus": "DSA Revision: Three Sum",
+            "tasks": [
+                {
+                    "title": "Three Sum",
+                    "category": "dsa",
+                    "id": "d24_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Review all variations and optimizations for 'Three Sum', ensuring you can explain different approaches and their time/space complexities, a hallmark of strong candidates at Meta.",
+            "date": "2026-05-19"
+        },
+        {
+            "day": 25,
+            "focus": "DSA Revision: Kth Largest Element",
+            "tasks": [
+                {
+                    "title": "Kth Largest Element in an Array",
+                    "category": "dsa",
+                    "id": "d25_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Revisit the algorithms for 'Kth Largest Element in an Array', focusing on understanding the underlying data structures and their efficiency, as this demonstrates a solid grasp of core CS concepts valued by Meta.",
+            "date": "2026-05-20"
+        },
+        {
+            "day": 26,
+            "focus": "System Design: Advanced Considerations",
+            "tasks": [
+                {
+                    "title": "Design a search product like Facebook",
+                    "category": "system-design",
+                    "id": "d26_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "For 'Design a search product like Facebook', consider advanced aspects like caching, load balancing, and fault tolerance, which are essential for building robust, large-scale systems like those at Meta.",
+            "date": "2026-05-21"
+        },
+        {
+            "day": 27,
+            "focus": "Behavioral Refinement",
+            "tasks": [
+                {
+                    "title": "Tell me about a time you failed.",
+                    "category": "behavioral",
+                    "id": "d27_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Tell me about a challenge you faced and how you overcame it.",
+                    "category": "behavioral",
+                    "id": "d27_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Refine your stories about failure and challenges to highlight learnings and growth, showing Meta that you can turn setbacks into opportunities.",
+            "date": "2026-05-22"
+        },
+        {
+            "day": 28,
+            "focus": "System Design: Q&A Preparation",
+            "tasks": [
+                {
+                    "title": "Design a search product like Facebook",
+                    "category": "system-design",
+                    "id": "d28_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Anticipate follow-up questions for 'Design a search product like Facebook' related to specific technologies or trade-offs, demonstrating your depth of knowledge.",
+            "date": "2026-05-23"
+        },
+        {
+            "day": 29,
+            "focus": "Final Polish: Behavioral & DSA",
+            "tasks": [
+                {
+                    "title": "Three Sum",
+                    "category": "dsa",
+                    "id": "d29_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Kth Largest Element in an Array",
+                    "category": "dsa",
+                    "id": "d29_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Why Meta?",
+                    "category": "behavioral",
+                    "id": "d29_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Quickly review the core logic of 'Three Sum' and 'Kth Largest Element in an Array', and have a strong, data-driven answer for 'Why Meta?', as these are common touchpoints in Meta interviews.",
+            "date": "2026-05-24"
+        },
+        {
+            "day": 30,
+            "focus": "Revision & Mindset",
+            "tasks": [
+                {
+                    "title": "Overall Review",
+                    "category": "revision",
+                    "id": "d30_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "On your revision day, focus on maintaining a positive and confident mindset, reflecting the resilient and problem-solving attitude that Meta looks for in its engineers.",
+            "date": "2026-05-25"
+        }
+    ],
+    "start_date": "2026-04-26"
+}

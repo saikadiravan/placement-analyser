@@ -1,0 +1,228 @@
+{
+    "company": "Infosys",
+    "role": "SDE",
+    "total_days": 14,
+    "difficulty": "Easy",
+    "schedule": [
+        {
+            "day": 1,
+            "focus": "Introduction & Foundational Concepts",
+            "tasks": [
+                {
+                    "title": "Tell me about yourself",
+                    "category": "behavioral",
+                    "id": "d1_t1",
+                    "completed": true
+                },
+                {
+                    "title": "What are the OOPS concepts?",
+                    "category": "behavioral",
+                    "id": "d1_t2",
+                    "completed": true
+                }
+            ],
+            "tip": "As Infosys's process includes a behavioral HR interview, be prepared to clearly articulate your background and foundational programming knowledge like OOPS concepts.",
+            "date": "2026-04-26"
+        },
+        {
+            "day": 2,
+            "focus": "Core Programming Concepts",
+            "tasks": [
+                {
+                    "title": "What is the difference between Ctrl+Z and Ctrl+C?",
+                    "category": "behavioral",
+                    "id": "d2_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Infosys's online assessment requires a qualifying percentage of 65%, suggesting that accuracy in understanding even basic technical distinctions is important.",
+            "date": "2026-04-27"
+        },
+        {
+            "day": 3,
+            "focus": "Introduction to Assessment Preparation",
+            "tasks": [
+                {
+                    "title": "Practice MCQs covering basic programming concepts",
+                    "category": "dsa",
+                    "id": "d3_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Infosys's online assessment includes MCQs, so dedicating time to practice these will help you meet the required qualifying percentage.",
+            "date": "2026-04-28"
+        },
+        {
+            "day": 4,
+            "focus": "Programming Question Practice",
+            "tasks": [
+                {
+                    "title": "Solve a basic programming question (e.g., string manipulation)",
+                    "category": "dsa",
+                    "id": "d4_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "The online assessment features two programming questions, so practicing solving these will be directly beneficial for Round 1.",
+            "date": "2026-04-29"
+        },
+        {
+            "day": 5,
+            "focus": "Behavioral Deep Dive & Tool Familiarity",
+            "tasks": [
+                {
+                    "title": "Describe your experience using Tosca and its common applications.",
+                    "category": "behavioral",
+                    "id": "d5_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Prepare STAR method answers for common behavioral questions.",
+                    "category": "behavioral",
+                    "id": "d5_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Infosys's HR interview often delves into your resume and projects; be ready to discuss specific tools like Tosca and provide concrete examples of your experience.",
+            "date": "2026-04-30"
+        },
+        {
+            "day": 6,
+            "focus": "Review of Foundational Concepts",
+            "tasks": [
+                {
+                    "title": "Revisit OOPS concepts and their real-world applications.",
+                    "category": "behavioral",
+                    "id": "d6_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Review answers for 'Tell me about yourself' and other introductory questions.",
+                    "category": "behavioral",
+                    "id": "d6_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Given that Infosys looks for both technical aptitude and behavioral fit, refining your answers to core questions ensures a strong impression in both rounds.",
+            "date": "2026-05-01"
+        },
+        {
+            "day": 7,
+            "focus": "Mixed Practice Session",
+            "tasks": [
+                {
+                    "title": "Practice a mix of MCQs and a simple programming question",
+                    "category": "dsa",
+                    "id": "d7_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Infosys's online assessment is a significant hurdle, so practicing both MCQ and coding components simulates the actual test environment.",
+            "date": "2026-05-02"
+        },
+        {
+            "day": 8,
+            "focus": "Behavioral Question Simulation",
+            "tasks": [
+                {
+                    "title": "Practice answering behavioural questions aloud, focusing on clarity and conciseness.",
+                    "category": "behavioral",
+                    "id": "d8_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Infosys's HR interview is designed to assess your communication skills and suitability for the role, making practice of behavioral answers crucial.",
+            "date": "2026-05-03"
+        },
+        {
+            "day": 9,
+            "focus": "Advanced Behavioral Preparation",
+            "tasks": [
+                {
+                    "title": "Deep dive into experiences related to Tosca and its integration into projects.",
+                    "category": "behavioral",
+                    "id": "d9_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Be prepared to elaborate on your experience with specific tools like Tosca, as Infosys values candidates who can demonstrate practical application of their skills.",
+            "date": "2026-05-04"
+        },
+        {
+            "day": 10,
+            "focus": "Mock Interview 1",
+            "tasks": [
+                {
+                    "title": "Full Mock Interview (Round 1 focus: MCQs and Programming)",
+                    "category": "mock",
+                    "id": "d10_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Simulating the online assessment with a mock interview helps identify areas for improvement before the actual Infosys assessment, where a 65% qualifying percentage is key.",
+            "date": "2026-05-05"
+        },
+        {
+            "day": 11,
+            "focus": "Mock Interview 2",
+            "tasks": [
+                {
+                    "title": "Full Mock Interview (Round 2 focus: Behavioral)",
+                    "category": "mock",
+                    "id": "d11_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Practicing the HR interview with a mock session allows you to refine your responses to behavioral questions and ensure a confident presentation to the Infosys interviewer.",
+            "date": "2026-05-06"
+        },
+        {
+            "day": 12,
+            "focus": "Behavioral Day",
+            "tasks": [
+                {
+                    "title": "Review and practice all listed behavioral questions thoroughly.",
+                    "category": "behavioral",
+                    "id": "d12_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Practice articulating project experiences and technical skills.",
+                    "category": "behavioral",
+                    "id": "d12_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Infosys's interview process heavily relies on behavioral assessment, so dedicating a day to comprehensively practice all potential behavioral questions is essential.",
+            "date": "2026-05-07"
+        },
+        {
+            "day": 13,
+            "focus": "Final Revision",
+            "tasks": [
+                {
+                    "title": "Review all behavioral questions and key concepts.",
+                    "category": "revision",
+                    "id": "d13_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Quick practice of basic programming question types.",
+                    "category": "revision",
+                    "id": "d13_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "A final revision ensures that you are well-prepared for both the technical MCQs and programming questions in the Infosys online assessment, as well as the behavioral aspects of the HR interview.",
+            "date": "2026-05-08"
+        },
+        {
+            "day": 14,
+            "focus": "Rest and Mental Preparation",
+            "tasks": [],
+            "tip": "While Infosys's interview involves assessment, ensuring you are well-rested and mentally prepared will help you perform your best on the day.",
+            "date": "2026-05-09"
+        }
+    ],
+    "start_date": "2026-04-26"
+}

@@ -1,0 +1,753 @@
+{
+    "company": "Salesforce",
+    "role": "Software Engineer",
+    "total_days": 30,
+    "difficulty": "Medium",
+    "schedule": [
+        {
+            "day": 1,
+            "focus": "DSA: Two Pointers & Basic String",
+            "tasks": [
+                {
+                    "title": "Two Sum",
+                    "category": "dsa",
+                    "id": "d1_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Isomorphic Strings",
+                    "category": "dsa",
+                    "id": "d1_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Reverse Words in a String",
+                    "category": "dsa",
+                    "id": "d1_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Reverse Words in a String III",
+                    "category": "dsa",
+                    "id": "d1_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce values a structured interview process; start with foundational problems to build a strong base for subsequent rounds.",
+            "date": "2026-04-24"
+        },
+        {
+            "day": 2,
+            "focus": "DSA: Array Manipulation & Basic Recursion",
+            "tasks": [
+                {
+                    "title": "Shuffle an Array",
+                    "category": "dsa",
+                    "id": "d2_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Find Pivot Index",
+                    "category": "dsa",
+                    "id": "d2_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Fizz Buzz",
+                    "category": "dsa",
+                    "id": "d2_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Product of Array Except Self",
+                    "category": "dsa",
+                    "id": "d2_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "To align with Salesforce's emphasis on understanding the specific role, ensure you can articulate your approach to common array manipulation problems.",
+            "date": "2026-04-25"
+        },
+        {
+            "day": 3,
+            "focus": "DSA: Linked Lists & Stacks/Queues",
+            "tasks": [
+                {
+                    "title": "Remove Duplicates from Sorted List",
+                    "category": "dsa",
+                    "id": "d3_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Remove Duplicates from Sorted List II",
+                    "category": "dsa",
+                    "id": "d3_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Implement Queue using Stacks",
+                    "category": "dsa",
+                    "id": "d3_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Simplify Path",
+                    "category": "dsa",
+                    "id": "d3_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce interviewers look for clarity in problem-solving; practice explaining your thought process for data structure implementations like queues.",
+            "date": "2026-04-26"
+        },
+        {
+            "day": 4,
+            "focus": "DSA: Hash Tables & Basic Tree Traversal",
+            "tasks": [
+                {
+                    "title": "Design HashMap",
+                    "category": "dsa",
+                    "id": "d4_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Group Anagrams",
+                    "category": "dsa",
+                    "id": "d4_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Valid Parentheses",
+                    "category": "dsa",
+                    "id": "d4_t3",
+                    "completed": false
+                },
+                {
+                    "title": "Symmetric Tree",
+                    "category": "dsa",
+                    "id": "d4_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "Cultural alignment is key at Salesforce; demonstrate your ability to handle common algorithmic patterns efficiently, similar to how you'd approach Salesforce's diverse product offerings.",
+            "date": "2026-04-27"
+        },
+        {
+            "day": 5,
+            "focus": "DSA: Recursion & Backtracking",
+            "tasks": [
+                {
+                    "title": "Letter Combinations of a Phone Number",
+                    "category": "dsa",
+                    "id": "d5_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Generate Parentheses",
+                    "category": "dsa",
+                    "id": "d5_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Permutations",
+                    "category": "dsa",
+                    "id": "d5_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce values strategic thinking; recursion and backtracking problems test your ability to break down complex problems into smaller, manageable steps.",
+            "date": "2026-04-28"
+        },
+        {
+            "day": 6,
+            "focus": "DSA: Binary Search & Rotated Arrays",
+            "tasks": [
+                {
+                    "title": "Find Minimum in Rotated Sorted Array",
+                    "category": "dsa",
+                    "id": "d6_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Search in Rotated Sorted Array",
+                    "category": "dsa",
+                    "id": "d6_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Find the Smallest Divisor Given a Threshold",
+                    "category": "dsa",
+                    "id": "d6_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "To showcase your problem-solving skills for Salesforce, focus on demonstrating how you can optimize solutions, like using binary search on sorted or rotated arrays.",
+            "date": "2026-04-29"
+        },
+        {
+            "day": 7,
+            "focus": "DSA: Tree - LCA & BST Validation",
+            "tasks": [
+                {
+                    "title": "Lowest Common Ancestor of a Binary Tree",
+                    "category": "dsa",
+                    "id": "d7_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Validate Binary Search Tree",
+                    "category": "dsa",
+                    "id": "d7_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Invert Binary Tree",
+                    "category": "dsa",
+                    "id": "d7_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce looks for candidates who can navigate complex data structures; practicing tree problems will help you demonstrate this during technical assessments.",
+            "date": "2026-04-30"
+        },
+        {
+            "day": 8,
+            "focus": "DSA: Dynamic Programming - Basic",
+            "tasks": [
+                {
+                    "title": "Longest Increasing Subsequence",
+                    "category": "dsa",
+                    "id": "d8_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Maximum Subarray",
+                    "category": "dsa",
+                    "id": "d8_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Decode String",
+                    "category": "dsa",
+                    "id": "d8_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "For Salesforce, understanding the 'why' behind your solution is crucial; DP problems require clear logic and optimization, mirroring the need for efficient solutions in enterprise software.",
+            "date": "2026-05-01"
+        },
+        {
+            "day": 9,
+            "focus": "DSA: Graph - BFS/DFS",
+            "tasks": [
+                {
+                    "title": "Number of Islands",
+                    "category": "dsa",
+                    "id": "d9_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Word Ladder",
+                    "category": "dsa",
+                    "id": "d9_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Course Schedule",
+                    "category": "dsa",
+                    "id": "d9_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce values candidates who can handle interconnected systems; graph traversal problems are excellent practice for demonstrating your ability to navigate complex relationships.",
+            "date": "2026-05-02"
+        },
+        {
+            "day": 10,
+            "focus": "DSA: Sliding Window & Greedy",
+            "tasks": [
+                {
+                    "title": "Merge Intervals",
+                    "category": "dsa",
+                    "id": "d10_t1",
+                    "completed": false
+                },
+                {
+                    "title": "K-diff Pairs in an Array",
+                    "category": "dsa",
+                    "id": "d10_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Largest Number",
+                    "category": "dsa",
+                    "id": "d10_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "As Salesforce emphasizes a positive candidate experience, showing a systematic approach to problems like interval merging can impress interviewers.",
+            "date": "2026-05-03"
+        },
+        {
+            "day": 11,
+            "focus": "DSA: Advanced Caching & Design",
+            "tasks": [
+                {
+                    "title": "LRU Cache",
+                    "category": "dsa",
+                    "id": "d11_t1",
+                    "completed": false
+                },
+                {
+                    "title": "LFU Cache",
+                    "category": "dsa",
+                    "id": "d11_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Insert Delete GetRandom O(1)",
+                    "category": "dsa",
+                    "id": "d11_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce often looks for engineers who can design robust and efficient systems; these caching and data structure design problems are directly relevant to building scalable software.",
+            "date": "2026-05-04"
+        },
+        {
+            "day": 12,
+            "focus": "DSA: Advanced Trees & Serialization",
+            "tasks": [
+                {
+                    "title": "Serialize and Deserialize Binary Tree",
+                    "category": "dsa",
+                    "id": "d12_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Binary Tree Vertical Order Traversal",
+                    "category": "dsa",
+                    "id": "d12_t2",
+                    "completed": false
+                },
+                {
+                    "title": "The Skyline Problem",
+                    "category": "dsa",
+                    "id": "d12_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce values strategic thinking, which applies to how you represent and process complex data; tree serialization and traversal problems highlight this skill.",
+            "date": "2026-05-05"
+        },
+        {
+            "day": 13,
+            "focus": "DSA: Graphs & String Matching",
+            "tasks": [
+                {
+                    "title": "Word Search II",
+                    "category": "dsa",
+                    "id": "d13_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Minimum Window Substring",
+                    "category": "dsa",
+                    "id": "d13_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Trapping Rain Water",
+                    "category": "dsa",
+                    "id": "d13_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "To align with Salesforce's emphasis on thorough preparation, tackle challenging string and graph problems that require careful algorithm design.",
+            "date": "2026-05-06"
+        },
+        {
+            "day": 14,
+            "focus": "DSA: Advanced DP & Array Problems",
+            "tasks": [
+                {
+                    "title": "Find the Duplicate Number",
+                    "category": "dsa",
+                    "id": "d14_t1",
+                    "completed": false
+                },
+                {
+                    "title": "First Missing Positive",
+                    "category": "dsa",
+                    "id": "d14_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Word Break",
+                    "category": "dsa",
+                    "id": "d14_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce seeks candidates who can handle complex logic; these DP and array problems test your ability to find efficient solutions for non-trivial scenarios.",
+            "date": "2026-05-07"
+        },
+        {
+            "day": 15,
+            "focus": "DSA: Heap & Sorting Related",
+            "tasks": [
+                {
+                    "title": "Kth Largest Element in an Array",
+                    "category": "dsa",
+                    "id": "d15_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Top K Frequent Words",
+                    "category": "dsa",
+                    "id": "d15_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Merge k Sorted Lists",
+                    "category": "dsa",
+                    "id": "d15_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce values efficiency; problems involving heaps and k-sorted lists demonstrate your understanding of time complexity and optimization.",
+            "date": "2026-05-08"
+        },
+        {
+            "day": 16,
+            "focus": "DSA: Design & Simulation",
+            "tasks": [
+                {
+                    "title": "Design Search Autocomplete System",
+                    "category": "dsa",
+                    "id": "d16_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Design Snake Game",
+                    "category": "dsa",
+                    "id": "d16_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Design Tic-Tac-Toe",
+                    "category": "dsa",
+                    "id": "d16_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce interviews can assess your ability to design systems; practicing these design-oriented problems will prepare you for questions that gauge practical application of your skills.",
+            "date": "2026-05-09"
+        },
+        {
+            "day": 17,
+            "focus": "DSA: Advanced Stacks & Queues",
+            "tasks": [
+                {
+                    "title": "Maximum Frequency Stack",
+                    "category": "dsa",
+                    "id": "d17_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Flatten 2D Vector",
+                    "category": "dsa",
+                    "id": "d17_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Add Two Numbers",
+                    "category": "dsa",
+                    "id": "d17_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce values clarity and order; these problems involving advanced stack/queue usage and linked list operations test your ability to manage data flows effectively.",
+            "date": "2026-05-10"
+        },
+        {
+            "day": 18,
+            "focus": "DSA: More DP & Optimization",
+            "tasks": [
+                {
+                    "title": "Reaching Points",
+                    "category": "dsa",
+                    "id": "d18_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Rotate Image",
+                    "category": "dsa",
+                    "id": "d18_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Search a 2D Matrix II",
+                    "category": "dsa",
+                    "id": "d18_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce looks for candidates who can think critically and optimize; these problems often have clever solutions that require a deep understanding of algorithmic principles.",
+            "date": "2026-05-11"
+        },
+        {
+            "day": 19,
+            "focus": "DSA: Advanced Hash Tables & Strings",
+            "tasks": [
+                {
+                    "title": "Add and Search Word - Data structure design",
+                    "category": "dsa",
+                    "id": "d19_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Find Median from Data Stream",
+                    "category": "dsa",
+                    "id": "d19_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Permutations",
+                    "category": "dsa",
+                    "id": "d19_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce values precise data management; problems involving trie-like structures and streaming data demonstrate your ability to handle large-scale data challenges.",
+            "date": "2026-05-12"
+        },
+        {
+            "day": 20,
+            "focus": "DSA: Miscellaneous & Problem Solving",
+            "tasks": [
+                {
+                    "title": "LRU Cache",
+                    "category": "dsa",
+                    "id": "d20_t1",
+                    "completed": false
+                },
+                {
+                    "title": "LFU Cache",
+                    "category": "dsa",
+                    "id": "d20_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Insert Delete GetRandom O(1)",
+                    "category": "dsa",
+                    "id": "d20_t3",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce looks for candidates who can adapt; revisit challenging problems like advanced caches to solidify your understanding before moving into the final preparation phase.",
+            "date": "2026-05-13"
+        },
+        {
+            "day": 21,
+            "focus": "Behavioral Interview Prep",
+            "tasks": [
+                {
+                    "title": "How do you structure your discovery calls?",
+                    "category": "behavioral",
+                    "id": "d21_t1",
+                    "completed": false
+                },
+                {
+                    "title": "What has your attainment been so far?",
+                    "category": "behavioral",
+                    "id": "d21_t2",
+                    "completed": false
+                },
+                {
+                    "title": "Salesforce is a premium product - how would you differentiate it based on pricing?",
+                    "category": "behavioral",
+                    "id": "d21_t3",
+                    "completed": false
+                },
+                {
+                    "title": "What are the responsibilities of a buddy trainer?",
+                    "category": "behavioral",
+                    "id": "d21_t4",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce values cultural alignment; prepare thoughtful answers to these behavioral questions, demonstrating how your experiences align with their values and mission.",
+            "date": "2026-05-14"
+        },
+        {
+            "day": 22,
+            "focus": "Mock Interview 1 (Technical)",
+            "tasks": [
+                {
+                    "title": "Mock Technical Interview 1",
+                    "category": "mock",
+                    "id": "d22_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce's technical assessment is a key stage; use this mock interview to simulate the pressure and identify areas where your technical communication can be strengthened.",
+            "date": "2026-05-15"
+        },
+        {
+            "day": 23,
+            "focus": "Mock Interview 2 (Behavioral/Technical Mix)",
+            "tasks": [
+                {
+                    "title": "Mock Interview 2 (Behavioral & Technical)",
+                    "category": "mock",
+                    "id": "d23_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce seeks well-rounded candidates; this mixed mock interview will help you practice transitioning between technical problem-solving and articulating your behavioral strengths.",
+            "date": "2026-05-16"
+        },
+        {
+            "day": 24,
+            "focus": "DSA: Revision & Weak Areas",
+            "tasks": [
+                {
+                    "title": "Review and re-solve 3 challenging DSA problems from Phase 1",
+                    "category": "dsa",
+                    "id": "d24_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Review and re-solve 3 challenging DSA problems from Phase 2",
+                    "category": "dsa",
+                    "id": "d24_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce emphasizes thorough preparation; revisiting areas where you felt less confident will ensure you are ready for any technical challenge.",
+            "date": "2026-05-17"
+        },
+        {
+            "day": 25,
+            "focus": "Company Research & Salesforce Culture",
+            "tasks": [
+                {
+                    "title": "Research Salesforce's latest product announcements and values",
+                    "category": "company-research",
+                    "id": "d25_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Understand Salesforce's mission statement and core values",
+                    "category": "company-research",
+                    "id": "d25_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce emphasizes cultural alignment; researching their values and mission will allow you to draw connections between your experiences and what they seek in candidates.",
+            "date": "2026-05-18"
+        },
+        {
+            "day": 26,
+            "focus": "DSA: Targeted Practice",
+            "tasks": [
+                {
+                    "title": "Select 2 problems from the full DSA list you found most difficult and solve them again",
+                    "category": "dsa",
+                    "id": "d26_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Select 2 problems from the full DSA list that are similar to previous interview questions and solve them",
+                    "category": "dsa",
+                    "id": "d26_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce interviewers look for a mastery of fundamental concepts; targeted practice on previously difficult problems will build confidence.",
+            "date": "2026-05-19"
+        },
+        {
+            "day": 27,
+            "focus": "Behavioral & STAR Method Refinement",
+            "tasks": [
+                {
+                    "title": "Practice the STAR method for common behavioral questions",
+                    "category": "behavioral",
+                    "id": "d27_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Prepare follow-up questions for your interviewers",
+                    "category": "behavioral",
+                    "id": "d27_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce values clear communication; practicing the STAR method ensures your behavioral answers are structured and impactful, aligning with their assessment of soft skills.",
+            "date": "2026-05-20"
+        },
+        {
+            "day": 28,
+            "focus": "DSA: Final Review",
+            "tasks": [
+                {
+                    "title": "Quick review of all 60 DSA problems' core concepts",
+                    "category": "dsa",
+                    "id": "d28_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Revisit notes on common patterns and edge cases",
+                    "category": "dsa",
+                    "id": "d28_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce expects a strong technical foundation; a quick review of all DSA problems ensures you have a broad understanding of patterns relevant to their technical assessments.",
+            "date": "2026-05-21"
+        },
+        {
+            "day": 29,
+            "focus": "Mindset & Logistics",
+            "tasks": [
+                {
+                    "title": "Prepare your environment for remote interviews (if applicable)",
+                    "category": "logistics",
+                    "id": "d29_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Practice positive self-affirmations and relaxation techniques",
+                    "category": "mindset",
+                    "id": "d29_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce's interview process can be rigorous; focusing on a calm and prepared mindset will help you present your best self during all rounds.",
+            "date": "2026-05-22"
+        },
+        {
+            "day": 30,
+            "focus": "Final Revision & Rest",
+            "tasks": [
+                {
+                    "title": "Light review of key Salesforce product areas and company values",
+                    "category": "revision",
+                    "id": "d30_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Rest and get adequate sleep",
+                    "category": "rest",
+                    "id": "d30_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Salesforce looks for enthusiastic candidates; a well-rested mind is crucial for demonstrating energy and engagement throughout their interview stages.",
+            "date": "2026-05-23"
+        }
+    ],
+    "start_date": "2026-04-24"
+}

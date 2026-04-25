@@ -1,10 +1,10 @@
 {
     "difficultyLeaderboard": {
         "company": "google",
-        "overallScore": 9.1,
+        "overallScore": 10.3,
         "avgProblemDifficulty": 9.0,
         "numRounds": 7,
-        "systemDesignWeight": 0.2,
+        "systemDesignWeight": 0.8,
         "behavioralWeight": 0.8,
         "dsaDifficulty": 9.0
     },
@@ -46,7 +46,7 @@
             },
             {
                 "name": "System Design",
-                "value": 0
+                "value": 15
             },
             {
                 "name": "Behavioral",
@@ -79,7 +79,16 @@
                 "count": 4
             }
         ],
-        "systemDesignFrequency": []
+        "systemDesignFrequency": [
+            {
+                "topic": "How to split a search query across multiple machines?",
+                "frequency": 30
+            },
+            {
+                "topic": "Develop the game Snake. What data structures will you use?",
+                "frequency": 25
+            }
+        ]
     },
     "extractedLists": {
         "dsa": [
@@ -144,13 +153,13 @@
             "Brace Expansion II",
             "Meeting Rooms II"
         ],
-        "systemDesign": [],
+        "systemDesign": [
+            "How to split a search query across multiple machines?",
+            "Develop the game Snake. What data structures will you use?"
+        ],
         "behavioral": [
-            "Why should one use merge sort over quick sort and vice-versa.",
-            "Questions from Project: How it works , Bigram and ngram model approach, etc.",
-            "Questions from Project: Bi-directional Sync b/w mysql and sqilte db.",
-            "What data structures will you use to develop the game Snake?",
-            "How would you split a search query across multiple machines?"
+            "Questions from Project: How it works, Bigram and ngram model approach, etc.",
+            "Questions from Project: Bi-directional Sync b/w mysql and sqilte db."
         ]
     }
 }

@@ -2,13 +2,11 @@
     "company": "google",
     "role": "sde",
     "interviewProcess": [
-        "Round 1: Phone interview (Talent Scout): Questions from projects, merge sort vs quick sort, sorting Person objects by age.",
-        "Round 2: Phone interview + coding on shared Google Doc (Software Developer): Questions from projects (bi-directional sync), checking if a number can be represented in 5^n form, removing unnecessary spaces from a string.",
-        "Round 3: Phone interview + coding on shared Google Doc (Software Developer): Optimizing a^b, splitting a search query across multiple machines, developing the game Snake (data structures and coding).",
-        "Telephonic Interviews (Two Rounds): 45-minute interviews on the phone, interviewer shares a Google Doc, asks one medium or two easy Algo DS problems.",
-        "Onsite Interviews: 5 interviews, 4 Algo DS interviews and 1 Googliness (behavioral) interview.",
-        "Team Matching Round: Recruiter contacts candidate with feedback, profile goes to different teams for matching based on work style and interests.",
-        "Offer Generation"
+        "Round 1: Phone interview with questions from projects, merge sort vs quick sort, and sorting Person objects by age.",
+        "Round 2: Phone interview with coding on a shared Google Doc, asking about bi-directional sync between MySQL and SQLite, checking if a number can be represented in 5^n form, and removing unnecessary spaces from a string.",
+        "Round 3: Phone interview with coding on a shared Google Doc, asking to optimize a^b, how to split a search query across multiple machines, and to develop the game Snake using appropriate data structures.",
+        "Telephonic Interviews (Two Rounds): 45-minute interviews where the interviewer shares a Google Doc and asks one medium or two easy Algorithm and Data Structure problems. These rounds may be skipped if performance in Google Kickstart is good.",
+        "Onsite Interviews (5 rounds): 4 Algorithm and Data Structure interviews and 1 Googliness (behavioral) interview."
     ],
     "dsaTopics": [
         "Longest Absolute File Path",
@@ -72,17 +70,18 @@
         "Brace Expansion II",
         "Meeting Rooms II"
     ],
-    "systemDesignTopics": [],
+    "systemDesignTopics": [
+        "Split a search query across multiple machines"
+    ],
     "behavioralQuestions": [
         "Why should one use merge sort over quick sort and vice-versa.",
         "Questions from Project: How it works , Bigram and ngram model approach, etc.",
         "Questions from Project: Bi-directional Sync b/w mysql and sqilte db.",
-        "What data structures will you use to develop the game Snake?",
-        "How would you split a search query across multiple machines?"
+        "Googliness interview is mostly a behavioural interview."
     ],
     "difficulty": "Hard",
     "avgRounds": 7,
-    "enrichedInsights": "Google's interview process is rigorous, involving multiple rounds of technical and behavioral assessments. The company emphasizes strong DSA skills, with a significant focus on problem-solving efficiency and clear communication of thought processes. Candidates are advised to think aloud, explain their rationale, clarify questions, and iterate on solutions, even starting with a brute-force approach. Red flags might include not clarifying questions or failing to explain thought processes. The overall experience aims to assess not just technical ability but also \"Googliness,\" suggesting a culture that values collaborative and thoughtful engineers.",
+    "enrichedInsights": "Google's interview process is comprehensive, involving multiple rounds of technical assessments and a 'Googliness' behavioral interview. Candidates are advised to thoroughly prepare for Data Structures and Algorithms, potentially through platforms like Google Kickstart. The interview process emphasizes thinking aloud, explaining technical rationale, and iterating on solutions, even starting with a brute-force approach. Candidates should also clarify questions and mind edge cases. The overall candidate experience seems to involve a rigorous but fair process, with a focus on hiring skilled individuals from diverse backgrounds.",
     "_sources": {
         "github": {
             "status": "ok",
@@ -94,7 +93,7 @@
         },
         "reddit": {
             "status": "ok",
-            "chars": 40557
+            "chars": 35058
         },
         "ambitionbox": {
             "status": "skipped",

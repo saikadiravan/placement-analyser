@@ -34,7 +34,7 @@ export type StudyPlan = {
   company: string;
   role: string;
   duration: number;
-  days: DayPlan[];
+  schedule: DayPlan[];   // 🔥 renamed
   createdAt: string;
 };
 
@@ -80,7 +80,7 @@ export function generateStudyPlan(company: string, role: string, duration: numbe
   taskIdCounter = 0;
   const dsaTopics = DSA_TOPICS[company] || DSA_TOPICS.default;
   const sdTopics = SYSTEM_DESIGN_TOPICS[company] || SYSTEM_DESIGN_TOPICS.default;
-  const days: DayPlan[] = [];
+  const schedule: DayPlan[] = [];
   const today = new Date();
 
   for (let d = 0; d < duration; d++) {
@@ -109,14 +109,14 @@ export function generateStudyPlan(company: string, role: string, duration: numbe
       tasks.push(makeTask(`Prepare: ${BEHAVIORAL_TOPICS[bIdx]}`, "behavioral"));
     }
 
-    days.push({
+   schedule.push({
       day: d + 1,
       date: date.toISOString().split("T")[0],
       tasks,
     });
   }
 
-  return { company, role, duration, days, createdAt: new Date().toISOString() };
+  return { company, role, duration, schedule, createdAt: new Date().toISOString() };
 }
 
 export function reschedule(plan: StudyPlan): { plan: StudyPlan; missedDays: number } {
@@ -124,7 +124,7 @@ export function reschedule(plan: StudyPlan): { plan: StudyPlan; missedDays: numb
   let missedDays = 0;
   const pendingTasks: Task[] = [];
 
-  for (const day of plan.days) {
+  for (const day of plan.schedule) {
     if (day.date < today) {
       const incomplete = day.tasks.filter((t) => !t.completed);
       if (incomplete.length > 0) {
@@ -137,14 +137,14 @@ export function reschedule(plan: StudyPlan): { plan: StudyPlan; missedDays: numb
   if (pendingTasks.length === 0) return { plan, missedDays: 0 };
 
   // Distribute pending tasks across future days
-  const futureDays = plan.days.filter((d) => d.date >= today);
+  const futureDays = plan.schedule.filter((d) => d.date >= today);
   let taskIdx = 0;
   for (const day of futureDays) {
     if (taskIdx >= pendingTasks.length) break;
     day.tasks.push(pendingTasks[taskIdx++]);
   }
 
-  return { plan: { ...plan, days: [...plan.days] }, missedDays };
+  return { plan: { ...plan, schedule: [...plan.schedule] }, missedDays };
 }
 
 // Analytics mock data

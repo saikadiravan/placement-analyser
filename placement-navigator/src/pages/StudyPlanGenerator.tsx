@@ -93,7 +93,7 @@ export default function StudyPlanGenerator() {
       const data = await response.json();
       
       if (data.status === "success") {
-        const updatedPlans = { ...savedPlans, [planId]: data.plan };
+        const updatedPlans = { ...savedPlans, [planId]: data.data };
         saveToStorage(updatedPlans);
         setActivePlanId(planId);
         toast.success("AI Study Plan generated successfully!");
@@ -154,6 +154,9 @@ export default function StudyPlanGenerator() {
   };
 
   const activePlan = activePlanId ? savedPlans[activePlanId] : null;
+  if (activePlanId && !activePlan) {
+  return <div>Loading plan...</div>;
+}
   const totalTasks = activePlan?.schedule?.reduce((a: number, d: any) => a + d.tasks.length, 0) ?? 0;
   const completedTasks = activePlan?.schedule?.reduce((a: number, d: any) => a + d.tasks.filter((t: any) => t.completed).length, 0) ?? 0;
   const progress = totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
@@ -260,10 +263,12 @@ export default function StudyPlanGenerator() {
                 <div className="glass-card rounded-xl p-6">
                   <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
                     <div>
-                      <h2 className="text-2xl font-bold">{activePlan.company} Study Plan</h2>
+                      <h2 className="text-2xl font-bold">
+                        {activePlan?.company || "Loading..."} Study Plan
+                      </h2>
                       <div className="mt-2 flex items-center gap-2">
-                        <Badge variant="secondary">{activePlan.role}</Badge>
-                        <Badge variant="outline">{activePlan.total_days} Days</Badge>
+                        <Badge variant="secondary">{activePlan?.role || "-"}</Badge>
+                        <Badge variant="outline">{activePlan?.total_days || 0} Days</Badge>
                       </div>
                     </div>
                     <div className="flex gap-2">
@@ -286,7 +291,7 @@ export default function StudyPlanGenerator() {
                   </div>
 
                   <div className="space-y-6">
-                    {activePlan.schedule.map((dayBlock: any, index: number) => (
+                    {activePlan?.schedule?.map((dayBlock: any, index: number) => (
                       <motion.div key={index} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.05 }} className="rounded-xl border bg-card p-5 shadow-sm">
                         <div className="mb-3 flex items-center gap-3">
                           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 font-bold text-primary">

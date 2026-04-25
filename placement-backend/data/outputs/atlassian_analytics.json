@@ -1,0 +1,162 @@
+{
+    "difficultyLeaderboard": {
+        "company": "atlassian",
+        "overallScore": 7.5,
+        "avgProblemDifficulty": 7.0,
+        "numRounds": 4,
+        "systemDesignWeight": 0.8,
+        "behavioralWeight": 0.4,
+        "dsaDifficulty": 7.5
+    },
+    "analyticsDashboard": {
+        "dsaTopicFrequency": [
+            {
+                "topic": "Find Leaves of Binary Tree",
+                "frequency": 40
+            },
+            {
+                "topic": "Time Based Key-Value Store",
+                "frequency": 37
+            },
+            {
+                "topic": "Lemonade Change",
+                "frequency": 34
+            },
+            {
+                "topic": "Maximum Average Subtree",
+                "frequency": 31
+            },
+            {
+                "topic": "Greatest Common Divisor of Strings",
+                "frequency": 28
+            },
+            {
+                "topic": "Shortest Distance to a Character",
+                "frequency": 25
+            }
+        ],
+        "roundTypes": [
+            {
+                "name": "Online Assessment",
+                "value": 30
+            },
+            {
+                "name": "Technical Coding",
+                "value": 40
+            },
+            {
+                "name": "System Design",
+                "value": 15
+            },
+            {
+                "name": "Behavioral",
+                "value": 15
+            }
+        ],
+        "problemPatterns": [
+            {
+                "pattern": "Two Pointer",
+                "count": 2
+            },
+            {
+                "pattern": "Sliding Window",
+                "count": 2
+            },
+            {
+                "pattern": "BFS/DFS",
+                "count": 2
+            },
+            {
+                "pattern": "Dynamic Programming",
+                "count": 2
+            },
+            {
+                "pattern": "Binary Search",
+                "count": 4
+            },
+            {
+                "pattern": "Greedy",
+                "count": 2
+            }
+        ],
+        "systemDesignFrequency": [
+            {
+                "topic": "Design Hit Counter",
+                "frequency": 30
+            },
+            {
+                "topic": "Design HashMap",
+                "frequency": 25
+            },
+            {
+                "topic": "Determine if a new booking can reuse an existing court or requires a new one given infinite courts and their booking times.",
+                "frequency": 20
+            }
+        ]
+    },
+    "extractedLists": {
+        "dsa": [
+            "Find Leaves of Binary Tree",
+            "Time Based Key-Value Store",
+            "Lemonade Change",
+            "Maximum Average Subtree",
+            "Greatest Common Divisor of Strings",
+            "Shortest Distance to a Character",
+            "Letter Combinations of a Phone Number",
+            "Design Hit Counter",
+            "Meeting Rooms II",
+            "Peeking Iterator",
+            "Dice Roll Simulation",
+            "Longest Increasing Subsequence",
+            "Merge k Sorted Lists",
+            "Valid Parentheses",
+            "Logger Rate Limiter",
+            "Rank Teams by Votes",
+            "Number of Islands",
+            "Design HashMap",
+            "Validate Binary Search Tree",
+            "Single Element in a Sorted Array",
+            "Backspace String Compare",
+            "Next Permutation",
+            "Decode String",
+            "Evaluate Reverse Polish Notation",
+            "Friend Circles",
+            "Best Time to Buy and Sell Stock III",
+            "Subarray Product Less Than K",
+            "Palindromic Substrings",
+            "Binary Tree Right Side View",
+            "Symmetric Tree",
+            "Flatten Nested List Iterator",
+            "Maximum Subarray",
+            "Binary Search Tree Iterator",
+            "Leaf-Similar Trees",
+            "Permutations",
+            "Valid Palindrome II",
+            "Insert into a Binary Search Tree",
+            "Random Pick with Weight",
+            "Basic Calculator II",
+            "Diameter of Binary Tree",
+            "Longest Substring Without Repeating Characters",
+            "Find Median from Data Stream",
+            "Merge Two Sorted Lists",
+            "Kth Largest Element in an Array",
+            "Subsets",
+            "Binary Tree Level Order Traversal",
+            "Top K Frequent Words",
+            "Single Number",
+            "Best Time to Buy and Sell Stock",
+            "Lowest Common Ancestor of a Binary Tree",
+            "Generate Parentheses",
+            "Merge Intervals",
+            "Verbal Arithmetic Puzzle",
+            "Winner of an election where votes are represented as candidate names",
+            "Nearest Smaller Element to Left/Right"
+        ],
+        "systemDesign": [
+            "Design Hit Counter",
+            "Design HashMap",
+            "Determine if a new booking can reuse an existing court or requires a new one given infinite courts and their booking times."
+        ],
+        "behavioral": []
+    }
+}

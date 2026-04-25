@@ -35,18 +35,18 @@ export default function ProgressTracker() {
 
   const stats = useMemo(() => {
     if (!plan) return null;
-    const totalTasks = plan.days.reduce((a, d) => a + d.tasks.length, 0);
-    const completed = plan.days.reduce((a, d) => a + d.tasks.filter((t) => t.completed).length, 0);
+    const totalTasks = plan.schedule?.reduce((a, d) => a + d.tasks.length, 0) ?? 0;
+    const completed = plan.schedule?.reduce((a, d) => a + d.tasks.filter((t) => t.completed).length, 0) ?? 0;
 
     // Streak
     let streak = 0;
-    for (let i = plan.days.length - 1; i >= 0; i--) {
-      if (plan.days[i].tasks.every((t) => t.completed) && plan.days[i].tasks.length > 0) streak++;
+    for (let i = (plan.schedule?.length || 0) - 1; i >= 0; i--) {
+  if (plan.schedule[i].tasks.every((t) => t.completed) && plan.schedule[i].tasks.length > 0) streak++;
       else break;
     }
 
     // Weekly progress
-    const weeklyProgress = plan.days.map((d) => ({
+    const weeklyProgress = plan.schedule?.map((d) => ({
       day: `D${d.day}`,
       completed: d.tasks.filter((t) => t.completed).length,
       total: d.tasks.length,
@@ -54,7 +54,7 @@ export default function ProgressTracker() {
 
     // Topic distribution
     const cats: Record<string, number> = {};
-    plan.days.forEach((d) => d.tasks.forEach((t) => {
+    plan.schedule?.forEach((d) => d.tasks.forEach((t) => {
       if (t.completed) cats[t.category] = (cats[t.category] || 0) + 1;
     }));
     const topicDist = Object.entries(cats).map(([name, value]) => ({
@@ -97,7 +97,7 @@ export default function ProgressTracker() {
             { label: "Overall Progress", value: `${stats.progress}%`, icon: CheckCircle2, color: "text-primary" },
             { label: "Tasks Completed", value: `${stats.completed}/${stats.totalTasks}`, icon: Trophy, color: "text-accent" },
             { label: "Current Streak", value: `${stats.streak} days`, icon: Flame, color: "text-streak" },
-            { label: "Days Remaining", value: `${plan.duration - plan.days.filter((d) => d.tasks.every((t) => t.completed)).length}`, icon: Calendar, color: "text-muted-foreground" },
+            { label: "Days Remaining", value: `${plan.duration - (plan.schedule?.filter((d) => d.tasks.every((t) => t.completed)).length || 0)}`, icon: Calendar, color: "text-muted-foreground" },
           ].map((s, i) => (
             <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }}
               className="glass-card rounded-xl p-5">

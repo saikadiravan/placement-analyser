@@ -1,0 +1,102 @@
+{
+    "company": "salesforce",
+    "role": "sde",
+    "interviewProcess": [
+        "Round 1: Recruiter screening (qualifications, experience, fit)",
+        "Technical Assessment: Coding challenges, problem-solving exercises, or technical questionnaire",
+        "Behavioral Interview: Soft skills assessment (teamwork, communication, problem-solving, leadership)",
+        "Managerial Interview: For leadership roles, assessing management skills, team leadership, strategic decisions",
+        "Cultural Fit Interview: Assessing alignment with company culture, values, and mission",
+        "Executive/Senior Leader Interview: For senior roles, focusing on strategic thinking and driving results"
+    ],
+    "dsaTopics": [
+        "LRU Cache",
+        "Reaching Points",
+        "Letter Combinations of a Phone Number",
+        "Merge Intervals",
+        "K-diff Pairs in an Array",
+        "Design HashMap",
+        "Find the Smallest Divisor Given a Threshold",
+        "LFU Cache",
+        "Implement Queue using Stacks",
+        "Design Search Autocomplete System",
+        "Maximum Frequency Stack",
+        "The Skyline Problem",
+        "Flatten 2D Vector",
+        "Two Sum",
+        "Remove Duplicates from Sorted List II",
+        "Design Tic-Tac-Toe",
+        "Shuffle an Array",
+        "Word Ladder",
+        "Largest Number",
+        "Number of Islands",
+        "Trapping Rain Water",
+        "Valid Parentheses",
+        "Find the Duplicate Number",
+        "Merge k Sorted Lists",
+        "Design Snake Game",
+        "Insert Delete GetRandom O(1)",
+        "Lowest Common Ancestor of a Binary Tree",
+        "Remove Duplicates from Sorted List",
+        "Reverse Words in a String",
+        "Decode String",
+        "Longest Increasing Subsequence",
+        "Group Anagrams",
+        "Isomorphic Strings",
+        "Find Minimum in Rotated Sorted Array",
+        "Rotate Image",
+        "First Missing Positive",
+        "Search in Rotated Sorted Array",
+        "Word Search II",
+        "Generate Parentheses",
+        "Find Pivot Index",
+        "Search a 2D Matrix II",
+        "Top K Frequent Words",
+        "Serialize and Deserialize Binary Tree",
+        "Validate Binary Search Tree",
+        "Permutations",
+        "Minimum Window Substring",
+        "Kth Largest Element in an Array",
+        "Add and Search Word - Data structure design",
+        "Invert Binary Tree",
+        "Find Median from Data Stream",
+        "Course Schedule",
+        "Maximum Subarray",
+        "Binary Tree Vertical Order Traversal",
+        "Simplify Path",
+        "Fizz Buzz",
+        "Product of Array Except Self",
+        "Word Break",
+        "Add Two Numbers",
+        "Reverse Words in a String III",
+        "Symmetric Tree"
+    ],
+    "systemDesignTopics": [],
+    "behavioralQuestions": [
+        "How do you structure your discovery calls?",
+        "What has your attainment been so far?",
+        "Salesforce is a premium product - how would you differentiate it based on pricing?",
+        "What are the responsibilities of a buddy trainer?"
+    ],
+    "difficulty": "Medium",
+    "avgRounds": 4,
+    "enrichedInsights": "Salesforce emphasizes a structured interview process that includes recruiter screening, technical assessments, behavioral interviews, and potentially managerial and cultural fit rounds, particularly for senior roles. The company values cultural alignment and strategic thinking. Interview advice suggests thorough preparation, emphasizing both technical skills and soft skills. While specific red flags are not detailed, a comprehensive approach to understanding the company's products, values, and the specific role is crucial for a positive candidate experience.",
+    "_sources": {
+        "github": {
+            "status": "ok",
+            "chars": 1571
+        },
+        "web": {
+            "status": "ok",
+            "chars": 10209
+        },
+        "reddit": {
+            "status": "ok",
+            "chars": 34363
+        },
+        "ambitionbox": {
+            "status": "skipped",
+            "chars": 0
+        }
+    }
+}
