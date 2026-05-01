@@ -239,3 +239,234 @@ if __name__ == "__main__":
         print(f"\n✅ Plan ready: {total} tasks over {result['total_days']} days")
         print(f"   Start date : {result.get('start_date')}")
         print(f"   Difficulty : {result.get('difficulty')}")
+
+
+
+# import json
+# import os
+# from datetime import datetime, timedelta
+# from typing import Dict, Any, List
+
+# from fastapi import APIRouter, HTTPException
+# from pydantic import BaseModel
+# import google.generativeai as genai
+# from dotenv import load_dotenv
+
+# from src.utils.paths import OUTPUTS_DIR
+
+# # ─────────────────────────────────────────────
+# # INIT
+# # ─────────────────────────────────────────────
+# load_dotenv()
+# genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
+# router = APIRouter()
+# model = genai.GenerativeModel("gemini-2.5-flash-lite")
+
+# # ─────────────────────────────────────────────
+# # REQUEST MODEL
+# # ─────────────────────────────────────────────
+# class StudyPlanRequest(BaseModel):
+#     company: str = "Amazon"
+#     role: str = "SDE"
+#     duration_days: int = 30
+
+
+# # ─────────────────────────────────────────────
+# # STATE
+# # ─────────────────────────────────────────────
+# class AgentState(dict):
+#     pass
+
+
+# # ─────────────────────────────────────────────
+# # HELPERS
+# # ─────────────────────────────────────────────
+# def _company_slug(company: str) -> str:
+#     return company.lower().replace(" ", "_").replace(".", "")
+
+# def _compute_start_date() -> str:
+#     return (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
+
+# def _date_for_day(start_date: str, day_number: int) -> str:
+#     start = datetime.strptime(start_date, "%Y-%m-%d")
+#     return (start + timedelta(days=day_number - 1)).strftime("%Y-%m-%d")
+
+# def _inject_ids_and_dates(schedule: list, start_date: str) -> list:
+#     for block in schedule:
+#         day_num = block.get("day", 1)
+#         block["date"] = _date_for_day(start_date, day_num)
+#         for idx, task in enumerate(block.get("tasks", []), start=1):
+#             task["id"] = f"d{day_num}_t{idx}"
+#             task["completed"] = False
+#     return schedule
+
+
+# # ─────────────────────────────────────────────
+# # NODE 1: LOAD INSIGHTS
+# # ─────────────────────────────────────────────
+# def load_insights_node(state: AgentState) -> AgentState:
+#     slug = _company_slug(state["company"])
+#     insights_file = OUTPUTS_DIR / f"{slug}_insights.json"
+
+#     if not insights_file.exists():
+#         raise HTTPException(status_code=404, detail="Insights not found")
+
+#     with open(insights_file, "r", encoding="utf-8") as f:
+#         state["insights"] = json.load(f)
+
+#     return state
+
+
+# # ─────────────────────────────────────────────
+# # NODE 2: PLANNER
+# # ─────────────────────────────────────────────
+# def planner_node(state: AgentState) -> AgentState:
+#     insights = state["insights"]
+#     days = state["duration_days"]
+
+#     dsa = insights.get("dsaTopics", [])
+
+#     chunk_size = max(1, len(dsa) // days)
+#     chunks = [dsa[i:i + chunk_size] for i in range(0, len(dsa), chunk_size)]
+
+#     schedule = []
+#     for i in range(days):
+#         tasks = []
+
+#         if i < len(chunks):
+#             for t in chunks[i]:
+#                 tasks.append({"title": t, "category": "dsa"})
+
+#         schedule.append({
+#             "day": i + 1,
+#             "focus": "DSA Practice",
+#             "tasks": tasks,
+#             "tip": ""
+#         })
+
+#     state["draft_schedule"] = schedule
+#     return state
+
+
+# # ─────────────────────────────────────────────
+# # SAFE LLM RESPONSE PARSER
+# # ─────────────────────────────────────────────
+# def _safe_parse_llm_json(text: str, fallback):
+#     try:
+#         return json.loads(text)
+#     except:
+#         try:
+#             start = text.find("{")
+#             end = text.rfind("}") + 1
+#             return json.loads(text[start:end])
+#         except:
+#             return fallback
+
+
+# # ─────────────────────────────────────────────
+# # NODE 3: LLM ENHANCER
+# # ─────────────────────────────────────────────
+# def llm_enhancer_node(state: AgentState) -> AgentState:
+#     insights = state["insights"]
+#     draft = state["draft_schedule"]
+
+#     enriched = insights.get("enrichedInsights", "")
+
+#     prompt = f"""
+# Enhance the following study plan:
+# - Improve 'focus'
+# - Add meaningful 'tip'
+
+# Return ONLY valid JSON.
+
+# Draft:
+# {json.dumps(draft)}
+# """
+
+#     response = model.generate_content(prompt)
+
+#     # safer extraction
+#     raw_text = getattr(response, "text", "")
+
+#     enhanced = _safe_parse_llm_json(raw_text, draft)
+
+#     state["final_schedule"] = enhanced
+#     return state
+
+
+# # ─────────────────────────────────────────────
+# # NODE 4: VALIDATOR
+# # ─────────────────────────────────────────────
+# def validator_node(state: AgentState) -> AgentState:
+#     schedule = state["final_schedule"]
+#     days = state["duration_days"]
+
+#     if not isinstance(schedule, list) or len(schedule) != days:
+#         raise HTTPException(status_code=500, detail="Invalid schedule")
+
+#     for day in schedule:
+#         if len(day.get("tasks", [])) > 6:
+#             raise HTTPException(status_code=500, detail="Too many tasks")
+
+#     return state
+
+
+# # ─────────────────────────────────────────────
+# # NODE 5: SAVE
+# # ─────────────────────────────────────────────
+# def save_node(state: AgentState) -> AgentState:
+#     start_date = _compute_start_date()
+#     schedule = _inject_ids_and_dates(state["final_schedule"], start_date)
+
+#     plan = {
+#         "company": state["company"],
+#         "role": state["role"],
+#         "total_days": state["duration_days"],
+#         "start_date": start_date,
+#         "schedule": schedule,
+#     }
+
+#     slug = _company_slug(state["company"])
+#     output_file = OUTPUTS_DIR / f"{slug}_schedule.json"
+
+#     with open(output_file, "w", encoding="utf-8") as f:
+#         json.dump(plan, f, indent=4)
+
+#     state["result"] = plan
+#     return state
+
+
+# # ─────────────────────────────────────────────
+# # ORCHESTRATOR
+# # ─────────────────────────────────────────────
+# def run_agent(state: AgentState) -> Dict[str, Any]:
+#     state = load_insights_node(state)
+#     state = planner_node(state)
+#     state = llm_enhancer_node(state)
+#     state = validator_node(state)
+#     state = save_node(state)
+#     return state["result"]
+
+# def generate_study_plan(company: str, role: str, duration_days: int):
+#     state = {
+#         "company": company,
+#         "role": role,
+#         "duration_days": duration_days
+#     }
+
+#     return run_agent(state)   # or whatever your main function is
+
+
+# # ─────────────────────────────────────────────
+# # API ROUTE
+# # ─────────────────────────────────────────────
+# @router.post("/generate-plan")
+# def generate_plan(req: StudyPlanRequest):
+#     state = AgentState({
+#         "company": req.company,
+#         "role": req.role,
+#         "duration_days": req.duration_days
+#     })
+
+#     return run_agent(state)

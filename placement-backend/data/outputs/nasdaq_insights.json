@@ -1,0 +1,35 @@
+{
+    "company": "nasdaq",
+    "role": "SDE",
+    "interviewProcess": [],
+    "dsaTopics": [],
+    "systemDesignTopics": [],
+    "behavioralQuestions": [
+        "What are repositories?",
+        "What do you know about balance sheets and profit and loss statements?",
+        "How can heap and thread dumps be collected for Java-based applications?",
+        "What were your responsibilities and contributions to the project team?",
+        "How do you check logs in Airflow?"
+    ],
+    "difficulty": "Medium",
+    "avgRounds": 4,
+    "enrichedInsights": "The interview process at Nasdaq, based on the provided data, appears to be somewhat opaque, with specific details about rounds not being readily available from Reddit or AmbitionBox for the SDE role. However, AmbitionBox does list common interview questions across various roles, touching upon technical concepts like repositories, financial statements, Java heap dumps, and general project responsibilities. A significant red flag mentioned on Reddit concerns potential work-life balance and management issues. While the exact number of rounds isn't specified for SDE, the fallback average of 4 rounds for mid-tier product companies is applied. The overall candidate experience seems to be less documented in terms of a structured process for SDEs compared to other roles or companies.",
+    "_sources": {
+        "github": {
+            "status": "failed",
+            "chars": 0
+        },
+        "web": {
+            "status": "ok",
+            "chars": 6306
+        },
+        "reddit": {
+            "status": "ok",
+            "chars": 40249
+        },
+        "ambitionbox": {
+            "status": "skipped",
+            "chars": 0
+        }
+    }
+}

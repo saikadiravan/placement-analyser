@@ -1,0 +1,44 @@
+{
+    "company": "Netflix",
+    "role": "Software Engineer",
+    "interviewProcess": [],
+    "dsaTopics": [
+        "Time Based Key-Value Store",
+        "Department Top Three Salaries",
+        "Merge Intervals",
+        "Find Median from Data Stream",
+        "Design Hit Counter",
+        "Find First and Last Position of Element in Sorted Array",
+        "Min Stack",
+        "Merge Sorted Array"
+    ],
+    "systemDesignTopics": [
+        "System Design Tutorial"
+    ],
+    "behavioralQuestions": [
+        "What are the fundamental responsibilities of a project manager?",
+        "How do you prioritize and manage multiple projects or clients simultaneously?",
+        "Walk me through the details of a couple of large-scale programs you have managed."
+    ],
+    "difficulty": "Hard",
+    "avgRounds": 5,
+    "enrichedInsights": "The provided data does not contain sufficient information to infer specific details about Netflix's company culture, interview advice, red flags, or the overall candidate experience for a Software Engineer role. The Reddit posts discuss general job market struggles and interview experiences at other companies, while the AmbitionBox data focuses on project management and content strategy roles. There is no direct information pertaining to the Software Engineer position at Netflix.",
+    "_sources": {
+        "github": {
+            "status": "ok",
+            "chars": 205
+        },
+        "web": {
+            "status": "ok",
+            "chars": 9469
+        },
+        "reddit": {
+            "status": "ok",
+            "chars": 12641
+        },
+        "ambitionbox": {
+            "status": "skipped",
+            "chars": 0
+        }
+    }
+}

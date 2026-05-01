@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import {  Bot } from "lucide-react";
 import { motion } from "framer-motion";
 import {
   Brain,
@@ -18,12 +19,13 @@ const navItems = [
   { path: "/", label: "Home", icon: Brain },
   { path: "/generate", label: "Study Plan", icon: Target },
   { path: "/analytics", label: "Analytics", icon: BarChart3 },
-  { path: "/difficulty", label: "Difficulty", icon: Trophy },
+  // { path: "/difficulty", label: "Difficulty", icon: Trophy },
   { path: "/gap-analyzer", label: "Gap & Readiness", icon: GitCompareArrows },
   { path: "/progress", label: "Progress", icon: BookOpen },
-  { path: "/pipeline", label: "Pipeline", icon: Workflow },
-  { path: "/insights", label: "Insights", icon: Compass },
-  { path: "/simulator", label: "Simulator", icon: Gamepad2 },
+  // { path: "/pipeline", label: "Pipeline", icon: Workflow },
+   { path: "/insights", label: "Insights", icon: Compass },
+   { path: "/chat", label: "AI Chat", icon: Bot } // <-- New Tab added here
+  // { path: "/simulator", label: "Simulator", icon: Gamepad2 },
 ];
 
 export default function Navbar() {
@@ -75,7 +77,7 @@ export default function Navbar() {
         {/* Right Side (Toggle + Mobile Nav) */}
         <div className="flex items-center gap-3">
           
-          {/* Online/Offline Toggle */}
+          Online/Offline Toggle
           <div className="hidden md:flex items-center space-x-3 ml-4">
             <span className="text-sm font-medium text-muted-foreground">
               {isOnline ? "Online (Live AI)" : "Offline (Mock Data)"}

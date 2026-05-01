@@ -25,6 +25,17 @@ export async function fetchCompanyInsights(company: string, isOnline: boolean) {
   return await response.json();
 }
 
+export async function chatWithAI(company: string, user_query: string) {
+  const response = await fetch(`${API_BASE_URL}/chat`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ company, user_query })
+  });
+  
+  if (!response.ok) throw new Error("Failed to get response from AI");
+  return await response.json();
+}
+
 export async function fetchStudyPlan(
   company: string,
   role: string,

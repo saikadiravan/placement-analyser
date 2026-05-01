@@ -1,0 +1,274 @@
+{
+    "company": "Netflix",
+    "role": "Software Engineer",
+    "total_days": 30,
+    "start_date": "2026-05-01",
+    "schedule": [
+        {
+            "day": 1,
+            "focus": "DSA Practice",
+            "tasks": [
+                {
+                    "title": "Time Based Key-Value Store",
+                    "category": "dsa",
+                    "id": "d1_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "",
+            "date": "2026-05-01"
+        },
+        {
+            "day": 2,
+            "focus": "DSA Practice",
+            "tasks": [
+                {
+                    "title": "Department Top Three Salaries",
+                    "category": "dsa",
+                    "id": "d2_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "",
+            "date": "2026-05-02"
+        },
+        {
+            "day": 3,
+            "focus": "DSA Practice",
+            "tasks": [
+                {
+                    "title": "Merge Intervals",
+                    "category": "dsa",
+                    "id": "d3_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "",
+            "date": "2026-05-03"
+        },
+        {
+            "day": 4,
+            "focus": "DSA Practice",
+            "tasks": [
+                {
+                    "title": "Find Median from Data Stream",
+                    "category": "dsa",
+                    "id": "d4_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "",
+            "date": "2026-05-04"
+        },
+        {
+            "day": 5,
+            "focus": "DSA Practice",
+            "tasks": [
+                {
+                    "title": "Design Hit Counter",
+                    "category": "dsa",
+                    "id": "d5_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "",
+            "date": "2026-05-05"
+        },
+        {
+            "day": 6,
+            "focus": "DSA Practice",
+            "tasks": [
+                {
+                    "title": "Find First and Last Position of Element in Sorted Array",
+                    "category": "dsa",
+                    "id": "d6_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "",
+            "date": "2026-05-06"
+        },
+        {
+            "day": 7,
+            "focus": "DSA Practice",
+            "tasks": [
+                {
+                    "title": "Min Stack",
+                    "category": "dsa",
+                    "id": "d7_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "",
+            "date": "2026-05-07"
+        },
+        {
+            "day": 8,
+            "focus": "DSA Practice",
+            "tasks": [
+                {
+                    "title": "Merge Sorted Array",
+                    "category": "dsa",
+                    "id": "d8_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "",
+            "date": "2026-05-08"
+        },
+        {
+            "day": 9,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-09"
+        },
+        {
+            "day": 10,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-10"
+        },
+        {
+            "day": 11,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-11"
+        },
+        {
+            "day": 12,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-12"
+        },
+        {
+            "day": 13,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-13"
+        },
+        {
+            "day": 14,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-14"
+        },
+        {
+            "day": 15,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-15"
+        },
+        {
+            "day": 16,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-16"
+        },
+        {
+            "day": 17,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-17"
+        },
+        {
+            "day": 18,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-18"
+        },
+        {
+            "day": 19,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-19"
+        },
+        {
+            "day": 20,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-20"
+        },
+        {
+            "day": 21,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-21"
+        },
+        {
+            "day": 22,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-22"
+        },
+        {
+            "day": 23,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-23"
+        },
+        {
+            "day": 24,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-24"
+        },
+        {
+            "day": 25,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-25"
+        },
+        {
+            "day": 26,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-26"
+        },
+        {
+            "day": 27,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-27"
+        },
+        {
+            "day": 28,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-28"
+        },
+        {
+            "day": 29,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-29"
+        },
+        {
+            "day": 30,
+            "focus": "DSA Practice",
+            "tasks": [],
+            "tip": "",
+            "date": "2026-05-30"
+        }
+    ]
+}

@@ -1,0 +1,149 @@
+{
+    "company": "nasdaq",
+    "role": "SDE",
+    "total_days": 7,
+    "difficulty": "Medium",
+    "schedule": [
+        {
+            "day": 1,
+            "focus": "DSA: Foundational Concepts",
+            "tasks": [
+                {
+                    "title": "How do you check logs in Airflow?",
+                    "category": "behavioral",
+                    "id": "d1_t1",
+                    "completed": false
+                },
+                {
+                    "title": "What are repositories?",
+                    "category": "behavioral",
+                    "id": "d1_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Given the opaque nature of Nasdaq's SDE interview process, start by understanding fundamental concepts like repositories, as these are mentioned in general interview questions.",
+            "date": "2026-05-01"
+        },
+        {
+            "day": 2,
+            "focus": "DSA: Java Specifics & Project Contributions",
+            "tasks": [
+                {
+                    "title": "How can heap and thread dumps be collected for Java-based applications?",
+                    "category": "behavioral",
+                    "id": "d2_t1",
+                    "completed": false
+                },
+                {
+                    "title": "What were your responsibilities and contributions to the project team?",
+                    "category": "behavioral",
+                    "id": "d2_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "Focus on Java-specific technical questions like heap dumps, as this demonstrates your ability to handle application-level diagnostics, a crucial skill for SDE roles.",
+            "date": "2026-05-02"
+        },
+        {
+            "day": 3,
+            "focus": "DSA: Financial Concepts & Deeper Project Insight",
+            "tasks": [
+                {
+                    "title": "What do you know about balance sheets and profit and loss statements?",
+                    "category": "behavioral",
+                    "id": "d3_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Understanding financial statements like balance sheets and P&L statements is important, as these are listed as common interview questions and could indicate a focus on financial technology.",
+            "date": "2026-05-03"
+        },
+        {
+            "day": 4,
+            "focus": "Revision & Behavioral Deep Dive",
+            "tasks": [
+                {
+                    "title": "What are repositories?",
+                    "category": "behavioral",
+                    "id": "d4_t1",
+                    "completed": false
+                },
+                {
+                    "title": "What do you know about balance sheets and profit and loss statements?",
+                    "category": "behavioral",
+                    "id": "d4_t2",
+                    "completed": false
+                },
+                {
+                    "title": "How can heap and thread dumps be collected for Java-based applications?",
+                    "category": "behavioral",
+                    "id": "d4_t3",
+                    "completed": false
+                },
+                {
+                    "title": "What were your responsibilities and contributions to the project team?",
+                    "category": "behavioral",
+                    "id": "d4_t4",
+                    "completed": false
+                },
+                {
+                    "title": "How do you check logs in Airflow?",
+                    "category": "behavioral",
+                    "id": "d4_t5",
+                    "completed": false
+                }
+            ],
+            "tip": "Given the limited public information on Nasdaq's SDE interview structure, dedicating a day to thoroughly reviewing all listed behavioral questions ensures you're prepared for any potential discussion points.",
+            "date": "2026-05-04"
+        },
+        {
+            "day": 5,
+            "focus": "Mock Interview 1",
+            "tasks": [
+                {
+                    "title": "Mock Interview: Simulate 2-3 rounds with a focus on behavioral and conceptual questions.",
+                    "category": "mock",
+                    "id": "d5_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Practice with mock interviews to gauge your responses and identify areas for improvement, especially considering the less documented interview process at Nasdaq, allowing you to simulate potential interview scenarios.",
+            "date": "2026-05-05"
+        },
+        {
+            "day": 6,
+            "focus": "Mock Interview 2 & Red Flag Awareness",
+            "tasks": [
+                {
+                    "title": "Mock Interview: Simulate 2-3 rounds, focusing on articulating your project contributions and technical knowledge.",
+                    "category": "mock",
+                    "id": "d6_t1",
+                    "completed": false
+                }
+            ],
+            "tip": "Use your second mock interview to address any potential work-life balance or management concerns, as these are mentioned as red flags, and practice articulating your approach to such situations.",
+            "date": "2026-05-06"
+        },
+        {
+            "day": 7,
+            "focus": "Final Revision",
+            "tasks": [
+                {
+                    "title": "Review all behavioral questions and company insights.",
+                    "category": "revision",
+                    "id": "d7_t1",
+                    "completed": false
+                },
+                {
+                    "title": "Revisit key concepts from behavioral questions (e.g., repositories, financial statements, Java dumps).",
+                    "category": "revision",
+                    "id": "d7_t2",
+                    "completed": false
+                }
+            ],
+            "tip": "On your final revision day, consolidate your understanding of the listed behavioral topics, as these are the most concrete elements of Nasdaq's interview process based on available data.",
+            "date": "2026-05-07"
+        }
+    ],
+    "start_date": "2026-05-01"
+}
