@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import sys
 from pathlib import Path
+from src.utils.db import fetch_schedule, fetch_insights, get_all_scheduled_companies
 
 sys.path.append(str(Path(__file__).resolve().parent))
 
@@ -14,7 +15,7 @@ from integration.build_schedule import run_pipeline
 from coversational.conversation_agent import chat_with_insights
 from recommendation.agents.gemini_agent import generate_study_plan
 from recommendation.core.rescheduler import reschedule_by_completed_days
-from utils.paths import OUTPUTS_DIR
+
 
 app = FastAPI(
     title="Placement Navigator API",
@@ -139,34 +140,41 @@ async def chat_with_ai(request: ChatRequest):
 # ─────────────────────────────────────────────
 @app.get("/schedule/{company}")
 async def get_schedule(company: str):
-    """Free route — reads current schedule from disk for the given company."""
+    """Free route — reads current schedule from DB for the given company."""
     safe_company = _company_slug(company)
-    file_path = OUTPUTS_DIR / f"{safe_company}_schedule.json"
     
-    if not file_path.exists():
-        raise HTTPException(status_code=404, detail=f"No schedule found for {company}")
+    plan = fetch_schedule(safe_company)
+    if not plan:
+        raise HTTPException(status_code=404, detail="Schedule not found")
         
-    with open(file_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    return plan
+    
 
 @app.get("/schedule")
 async def list_schedules():
-    """Free route — lists all companies that have a generated schedule."""
+    """Free route — lists all companies that have a generated schedule in the DB."""
+    # Note: get_all_scheduled_companies returns a list of tuples like [('amazon',), ('google',)]
+    companies = get_all_scheduled_companies()
+    
     schedules = []
-    for file in OUTPUTS_DIR.glob("*_schedule.json"):
-        company_slug = file.stem.replace("_schedule", "")
+    for c in companies:
         schedules.append({
-            "company": company_slug,
-            "file": file.name,
+            "company": c,
+            "file": f"{c}_schedule (DB)",
         })
     return {"schedules": schedules}
 
+
 @app.get("/insights/{company}")
 async def get_insights(company: str):
-    """Online Mode route — Fetches the extracted JSON insights from disk."""
+    """Online Mode route — Fetches the extracted JSON insights from DB."""
     safe_company = _company_slug(company)
-    verified_path = OUTPUTS_DIR / f"{safe_company}_verified_insights.json"
-    raw_path = OUTPUTS_DIR / f"{safe_company}_insights.json"
+    
+    insights_data = fetch_insights(safe_company)
+    if not insights_data:
+        raise HTTPException(status_code=404, detail="Insights not found")
+        
+    return insights_data
     
     # Prefer verified insights if they exist, otherwise fall back to raw ETL output
     target_path = verified_path if verified_path.exists() else raw_path

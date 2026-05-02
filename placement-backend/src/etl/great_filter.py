@@ -3,7 +3,8 @@ import json
 import google.generativeai as genai
 from typing import Dict
 from dotenv import load_dotenv
-from src.utils.paths import OUTPUTS_DIR
+# Import your database helper instead
+from src.utils.db import insert_insights
 
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
@@ -240,7 +241,15 @@ Return ONLY the raw JSON object below. No markdown fences. No explanation. No pr
 
 
 def run_great_filter(extracted_data: Dict) -> dict:
-    return GreatFilterAgent().process(extracted_data)
+    result = GreatFilterAgent().process(extracted_data)
+    
+    # Create a slug for the database
+    company_slug = result.get("company", "").lower().replace(" ", "_").replace(".", "")
+    
+    # Insert the final validated JSON directly into the database
+    insert_insights(company_slug, result)
+    
+    return result
 
 
 # ─────────────────────────────────────────────
