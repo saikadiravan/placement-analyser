@@ -25,6 +25,26 @@ export async function fetchCompanyInsights(company: string, isOnline: boolean) {
   return await response.json();
 }
 
+// Add this to the bottom of src/lib/api.ts
+export async function rescheduleTasks(company: string, completedTaskIds: string[], isOnline?: boolean) {
+  if (!isOnline) {
+    // If offline, you can fall back to the mock engine or throw an error
+    throw new Error("Rescheduling requires online mode to update the database.");
+  }
+
+  const response = await fetch(`${API_BASE_URL}/reschedule`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+  company,
+  completed_task_ids: completedTaskIds.filter(Boolean),
+})
+  });
+
+  if (!response.ok) throw new Error("Failed to reschedule tasks in the database");
+  return await response.json();
+}
+
 export async function chatWithAI(company: string, user_query: string) {
   const response = await fetch(`${API_BASE_URL}/chat`, {
     method: "POST",
@@ -69,22 +89,7 @@ export async function fetchStudyPlan(
   const data = await response.json();
   
   // Transform backend → frontend format
-  return {
-    company: data.company || company,
-    role: data.role || role,
-    duration: data.total_days || duration,
-    createdAt: new Date().toISOString(),
-    days: data.schedule.map((dayObj: any) => ({
-      day: dayObj.day,
-      date: dayObj.date || new Date().toISOString(),
-      tasks: dayObj.tasks.map((task: any) => ({
-        id: task.id || Math.random().toString(36).substr(2, 9),
-        title: task.title,
-        category: task.category || "dsa",
-        completed: task.completed || false
-      }))
-    }))
-  };
+  return data.status === "success" ? data.data : data;
 }
 
 // ✅ ADDED FUNCTION

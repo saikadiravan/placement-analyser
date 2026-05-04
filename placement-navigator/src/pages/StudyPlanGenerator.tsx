@@ -8,7 +8,9 @@ import { Progress } from "@/components/ui/progress";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { COMPANIES, ROLES } from "@/lib/studyPlanEngine";
-import { fetchStudyPlan, runETLPipeline } from "@/lib/api"; 
+import { fetchStudyPlan, runETLPipeline, rescheduleTasks } from "@/lib/api"; // Added rescheduleTasks
+import { useMode } from "@/context/ModeContext"; // Ensure you can access isOnline
+
 
 const categoryColors: Record<string, string> = {
   dsa: "bg-primary/10 text-primary border-primary/20",
@@ -34,11 +36,19 @@ export default function StudyPlanGenerator() {
 
   // --- INITIALIZATION ---
   useEffect(() => {
+  const syncPlans = () => {
     const localData = localStorage.getItem("studyPlansMap");
     if (localData) {
       setSavedPlans(JSON.parse(localData));
     }
-  }, []);
+  };
+
+  syncPlans();
+
+  const interval = setInterval(syncPlans, 500); // 🔥 auto refresh
+
+  return () => clearInterval(interval);
+}, []);
 
   const saveToStorage = (newPlans: Record<string, any>) => {
     setSavedPlans(newPlans);
@@ -88,7 +98,7 @@ export default function StudyPlanGenerator() {
       const response = await fetch("http://localhost:5000/generate-plan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ company, role, duration: parseInt(duration) })
+        body: JSON.stringify({ company, role, duration_days: parseInt(duration) })
       });
       
       const data = await response.json();
@@ -119,21 +129,75 @@ export default function StudyPlanGenerator() {
     toast.success("Study plan deleted.");
   };
 
-  const toggleTask = (dayNum: number, taskTitle: string) => {
-    if (!activePlanId) return;
-    const plan = savedPlans[activePlanId];
-    
-    const updatedPlan = {
-      ...plan,
-      schedule: plan.schedule.map((d: any) =>
-        d.day === dayNum
-          ? { ...d, tasks: d.tasks.map((t: any) => t.title === taskTitle ? { ...t, completed: !t.completed } : t) }
-          : d
-      )
-    };
-    
-    saveToStorage({ ...savedPlans, [activePlanId]: updatedPlan });
+  const { isOnline } = useMode(); // Put this at the top of your component with your other hooks
+
+const toggleTask = async (taskId: string) => {
+  if (!activePlanId) return;
+  const plan = savedPlans[activePlanId];
+
+  // OFFLINE MODE (unchanged)
+  if (!isOnline) {
+    const updatedSchedule = plan.schedule.map((day: any) => ({
+      ...day,
+      tasks: day.tasks.map((t: any) =>
+        t.id === taskId ? { ...t, completed: !t.completed } : t
+      ),
+    }));
+
+    saveToStorage({
+      ...savedPlans,
+      [activePlanId]: { ...plan, schedule: updatedSchedule },
+    });
+
+    toast.success("Task updated locally.");
+    return;
+  }
+
+  // ✅ STEP 1: Update LOCAL state FIRST
+  const updatedSchedule = plan.schedule.map((day: any) => ({
+    ...day,
+    tasks: day.tasks.map((t: any) =>
+      t.id === taskId ? { ...t, completed: !t.completed } : t
+    ),
+  }));
+
+  const updatedPlanLocal = {
+    ...plan,
+    schedule: updatedSchedule,
   };
+
+  // Save immediately (CRITICAL FIX)
+  const updatedPlans = { ...savedPlans, [activePlanId]: updatedPlanLocal };
+  saveToStorage(updatedPlans);
+
+  // ✅ STEP 2: Build completedIds from UPDATED state
+  const completedIds: string[] = [];
+
+  updatedSchedule.forEach((day: any) => {
+    day.tasks.forEach((t: any) => {
+      if (t.completed) completedIds.push(t.id);
+    });
+  });
+
+  // ✅ STEP 3: Sync with backend
+  try {
+    const res = await rescheduleTasks(plan.company, completedIds, true);
+
+    const updatedPlan = res.updated_plan;
+
+    // Save backend truth
+    const finalPlans = { ...updatedPlans, [activePlanId]: updatedPlan };
+    saveToStorage(finalPlans);
+const rate = res.completion_rate ?? 0;
+    toast.success(
+      res.tasks_rescheduled > 0
+        ? `Task updated! ${res.tasks_rescheduled} task(s) rescheduled. Score: ${(rate * 100).toFixed(1)}%`
+        : `Task updated! Score: ${(rate* 100).toFixed(1)}%`
+    );
+  } catch (err: any) {
+    toast.error(err.message || "Failed to sync with backend.");
+  }
+};
 
   const handleDownload = () => {
     if (!activePlanId) return;
@@ -156,6 +220,11 @@ export default function StudyPlanGenerator() {
   };
 
   const activePlan = activePlanId ? savedPlans[activePlanId] : null;
+  useEffect(() => {
+  if (activePlanId && savedPlans[activePlanId]) {
+    setActivePlanId(activePlanId); // force re-render
+  }
+}, [savedPlans]);
   if (activePlanId && !activePlan) {
   return <div>Loading plan...</div>;
 }
@@ -304,14 +373,14 @@ export default function StudyPlanGenerator() {
                           </div>
                           <div>
                             <h3 className="font-semibold">{dayBlock.focus}</h3>
-                            <p className="text-sm italic text-muted-foreground">💡 {dayBlock.tips}</p>
+                            <p className="text-sm italic text-muted-foreground">💡 {dayBlock.tip}</p>
                           </div>
                         </div>
 
                         <div className="space-y-2 mt-4 pl-12">
                           {dayBlock.tasks.map((task: any, tIndex: number) => (
                             <label key={tIndex} className={`flex cursor-pointer items-start gap-3 rounded-lg border p-3 transition-colors hover:bg-muted/50 ${task.completed ? 'bg-muted/30 opacity-70' : ''}`}>
-                              <Checkbox className="mt-1" checked={task.completed || false} onCheckedChange={() => toggleTask(dayBlock.day, task.title)} />
+                              <Checkbox className="mt-1" checked={task.completed || false} onCheckedChange={() => toggleTask(task.id)} />
                               <div className="flex-1">
                                 <p className={`font-medium ${task.completed ? 'line-through' : ''}`}>{task.title}</p>
                               </div>

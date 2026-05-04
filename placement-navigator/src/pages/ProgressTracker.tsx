@@ -4,9 +4,10 @@ import { Flame, Trophy, CheckCircle2, AlertTriangle, Calendar } from "lucide-rea
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
-import { type StudyPlan, reschedule } from "@/lib/studyPlanEngine";
+import { type StudyPlan } from "@/lib/studyPlanEngine";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
+import { rescheduleTasks } from "@/lib/api";
 
 const COLORS = ["hsl(238,73%,58%)", "hsl(200,85%,55%)", "hsl(152,60%,45%)"];
 
@@ -24,29 +25,44 @@ export default function ProgressTracker() {
     setPlan(plans[activeId]);
   }
 }, []);
-useEffect(() => {
-  const interval = setInterval(() => {
-    const plans = JSON.parse(localStorage.getItem("studyPlansMap") || "{}");
-    const activeId = localStorage.getItem("activePlanId");
-
-    if (activeId && plans[activeId]) {
-      setPlan(plans[activeId]);
-    }
-  }, 1000);
-
-  return () => clearInterval(interval);
-}, []);
   
-  const handleReschedule = () => {
-    if (!plan) return;
-    const { plan: updated, missedDays } = reschedule(plan);
-    if (missedDays > 0) {
-      setPlan(updated);
-      toast.warning(`You missed ${missedDays} day(s). Your schedule has been adjusted.`);
+  
+  const handleReschedule = async () => {
+  if (!plan) return;
+
+  const completedIds: string[] = [];
+  (plan as any).schedule?.forEach((day: any) => {
+    day.tasks?.forEach((t: any) => {
+      if (t.completed && t.id) completedIds.push(t.id);
+    });
+  });
+
+  try {
+    const res = await rescheduleTasks((plan as any).company, completedIds, true);
+    const updatedPlan = res.updated_plan;
+
+// Ensure structure consistency
+setPlan(updatedPlan);
+
+    // Write back to localStorage so StudyPlanGenerator stays in sync
+    const activeId = localStorage.getItem("activePlanId");
+    if (activeId) {
+      const plans = JSON.parse(localStorage.getItem("studyPlansMap") || "{}");
+      plans[activeId] = updatedPlan;
+      localStorage.setItem("studyPlansMap", JSON.stringify(plans));
+    }
+    if (res.tasks_rescheduled > 0) {
+      const rate = res.completion_rate ?? 0;
+      toast.warning(
+     `${res.tasks_rescheduled} overdue task(s) redistributed. Score: ${(rate * 100).toFixed(1)}%`
+);
     } else {
       toast.success("You're on track! No rescheduling needed.");
     }
-  };
+  } catch (err: any) {
+    toast.error(err.message || "Reschedule failed. Is the backend running?");
+  }
+};
 
   const handlePlanChange = (id: string) => {
   const plans = JSON.parse(localStorage.getItem("studyPlansMap") || "{}");
@@ -111,7 +127,7 @@ for (let i = 0; i < (plan.schedule?.length || 0); i++) {
 const completedDays = plan.schedule.filter(
   (d) => d.tasks.length > 0 && d.tasks.every((t) => t.completed)
 ).length;
-const totalDays = (plan as any).duration ?? (plan as any).total_days ?? 0;
+const totalDays = (plan as any).total_days ?? 0;
 
 const remainingDays = Math.max(totalDays - completedDays, 0);
 
@@ -134,7 +150,9 @@ const remainingDays = Math.max(totalDays - completedDays, 0);
   </select>
 </div>
             <h1 className="text-3xl font-bold">Progress Tracker</h1>
-            <p className="mt-2 text-muted-foreground">{plan.company} • {plan.role} • {plan.duration}-day plan</p>
+            <p className="mt-2 text-muted-foreground">
+  {(plan as any).company} • {(plan as any).role} • {(plan as any).total_days ?? 0}-day plan
+</p>
           </div>
           <Button variant="outline" onClick={handleReschedule} className="gap-2">
             <AlertTriangle className="h-4 w-4" /> Auto-Reschedule
