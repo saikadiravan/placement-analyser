@@ -20,7 +20,7 @@ const navItems = [
   { path: "/generate", label: "Study Plan", icon: Target },
   { path: "/analytics", label: "Analytics", icon: BarChart3 },
   // { path: "/difficulty", label: "Difficulty", icon: Trophy },
-  { path: "/gap-analyzer", label: "Gap & Readiness", icon: GitCompareArrows },
+  // { path: "/gap-analyzer", label: "Gap & Readiness", icon: GitCompareArrows },
   { path: "/progress", label: "Progress", icon: BookOpen },
   // { path: "/pipeline", label: "Pipeline", icon: Workflow },
    { path: "/insights", label: "Insights", icon: Compass },

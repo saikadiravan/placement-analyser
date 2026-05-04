@@ -4,6 +4,10 @@ import { getAnalytics as mockGetAnalytics } from "./studyPlanEngine";
 
 const API_BASE_URL = "http://localhost:5000";
 
+// ─────────────────────────────────────────────
+// CORE API FUNCTIONS
+// ─────────────────────────────────────────────
+
 export async function runETLPipeline(company: string, role: string) {
   const response = await fetch(`${API_BASE_URL}/extract`, {
     method: "POST",
@@ -25,10 +29,8 @@ export async function fetchCompanyInsights(company: string, isOnline: boolean) {
   return await response.json();
 }
 
-// Add this to the bottom of src/lib/api.ts
 export async function rescheduleTasks(company: string, completedTaskIds: string[], isOnline?: boolean) {
   if (!isOnline) {
-    // If offline, you can fall back to the mock engine or throw an error
     throw new Error("Rescheduling requires online mode to update the database.");
   }
 
@@ -36,9 +38,9 @@ export async function rescheduleTasks(company: string, completedTaskIds: string[
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-  company,
-  completed_task_ids: completedTaskIds.filter(Boolean),
-})
+      company,
+      completed_task_ids: completedTaskIds.filter(Boolean),
+    })
   });
 
   if (!response.ok) throw new Error("Failed to reschedule tasks in the database");
@@ -67,7 +69,7 @@ export async function fetchStudyPlan(
     return mockGeneratePlan(company, role, duration);
   }
 
-  // Convert company name to slug (e.g., "JP Morgan" → "jp_morgan")
+  // Convert company name to slug
   const companySlug = company
     .toLowerCase()
     .replace(/ /g, "_")
@@ -92,51 +94,37 @@ export async function fetchStudyPlan(
   return data.status === "success" ? data.data : data;
 }
 
-// ✅ ADDED FUNCTION
-export async function fetchAnalytics(company: string, isOnline: boolean) {
-  if (!isOnline) {
-    // OFFLINE MODE: Use existing mock logic
-    return mockGetAnalytics(company);
-  }
-
-  // ONLINE MODE: Fetch from insights endpoint
-  const response = await fetch(`${API_BASE_URL}/insights/${company}`);
+export async function fetchAnalytics(company: string) {
+  // Call the new dedicated analytics route which reads from the live SQLite DB
+  const response = await fetch(`http://localhost:5000/analytics/${company}`);
   
   if (!response.ok) {
-    throw new Error("No insights found. Run the ETL pipeline first.");
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.detail || `No live data found for ${company}. Run the ETL pipeline first.`);
+  }
+
+  const data = await response.json();
+  
+  // The backend returns { difficultyLeaderboard, analyticsDashboard, extractedLists }
+  // We only need the analyticsDashboard payload for the charts
+  return data.analyticsDashboard;
+}
+// ─────────────────────────────────────────────
+// NEW: AI POWERED GAP PRIORITIZATION
+// ─────────────────────────────────────────────
+
+export async function fetchAIPriorities(company: string, insights: any, gaps: any) {
+  const response = await fetch(`${API_BASE_URL}/prioritize`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ company, insights, gaps })
+  });
+  
+  if (!response.ok) {
+    const err = await response.json().catch(() => ({}));
+    throw new Error(err.detail || "Failed to generate AI priorities");
   }
   
-  const insight = await response.json();
-  
-  // Transform data for charts
-  return {
-    // Bar Chart: DSA Topics
-    dsaTopicFrequency: (insight.dsaTopics || []).slice(0, 10).map((t: string, i: number) => ({
-      topic: t.length > 20 ? t.substring(0, 20) + "..." : t,
-      frequency: Math.max(10, 50 - i * 4) 
-    })),
-    
-    // Pie Chart: Interview Rounds
-    roundTypes: [
-      { name: "Technical/Coding", value: 50 },
-      { name: "System Design", value: 20 },
-      { name: "Behavioral", value: 20 },
-      { name: "Online Assessment", value: 10 }
-    ],
-    
-    // Radar Chart: Patterns
-    problemPatterns: [
-      { pattern: "Arrays & Strings", count: 25 },
-      { pattern: "Graphs/Trees", count: 20 },
-      { pattern: "Dynamic Programming", count: 15 },
-      { pattern: "System Design", count: 10 },
-      { pattern: "Behavioral", count: 10 }
-    ],
-    
-    // Bar Chart: System Design
-    systemDesignFrequency: (insight.systemDesignTopics || []).slice(0, 6).map((t: string, i: number) => ({
-      topic: t.length > 20 ? t.substring(0, 20) + "..." : t,
-      frequency: Math.max(5, 30 - i * 3)
-    }))
-  };
+  const data = await response.json();
+  return data.data;
 }

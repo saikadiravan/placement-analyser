@@ -181,7 +181,7 @@ const toggleTask = async (taskId: string) => {
 
   // ✅ STEP 3: Sync with backend
   try {
-    const res = await rescheduleTasks(plan.company, completedIds, true);
+    const res = await rescheduleTasks(plan.company, completedIds);
 
     const updatedPlan = res.updated_plan;
 

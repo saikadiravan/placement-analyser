@@ -32,7 +32,7 @@ const App = () => (
             <Route path="/generate" element={<StudyPlanGenerator />} />
             <Route path="/analytics" element={<AnalyticsDashboard />} />
             {/* <Route path="/difficulty" element={<DifficultyLeaderboard />} /> */}
-            <Route path="/gap-analyzer" element={<GapAnalyzer />} />
+            {/* <Route path="/gap-analyzer" element={<GapAnalyzer />} /> */}
             <Route path="/progress" element={<ProgressTracker />} />
             <Route path="/chat" element={<Chatbot />} />       {/* <-- New Route added here */}
             {/* <Route path="/pipeline" element={<PipelineVisualization />} /> */}

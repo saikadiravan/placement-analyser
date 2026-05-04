@@ -97,14 +97,18 @@ export function analyzeGaps(
   company: string,
   completedDsa: string[],
   completedSD: string[],
-  completedBehavioral: string[]
+  completedBehavioral: string[],
+  liveRequirements?: { dsa: string[]; systemDesign: string[]; behavioral: string[] }
 ): GapAnalysis {
-  const req = COMPANY_REQUIRED_TOPICS[company] || COMPANY_REQUIRED_TOPICS.default;
+  // Use live data if provided, otherwise fallback to hardcoded
+  const req = liveRequirements || COMPANY_REQUIRED_TOPICS[company] || COMPANY_REQUIRED_TOPICS.default;
+
   const gaps = {
     dsa: req.dsa.filter((t) => !completedDsa.includes(t)),
     systemDesign: req.systemDesign.filter((t) => !completedSD.includes(t)),
     behavioral: req.behavioral.filter((t) => !completedBehavioral.includes(t)),
   };
+
   const dsaComp = req.dsa.length ? Math.round(((req.dsa.length - gaps.dsa.length) / req.dsa.length) * 100) : 100;
   const sdComp = req.systemDesign.length ? Math.round(((req.systemDesign.length - gaps.systemDesign.length) / req.systemDesign.length) * 100) : 100;
   const behComp = req.behavioral.length ? Math.round(((req.behavioral.length - gaps.behavioral.length) / req.behavioral.length) * 100) : 100;
@@ -138,20 +142,27 @@ export function calculateReadiness(
   gapAnalysis: GapAnalysis,
   questionsCompleted: number,
   totalQuestions: number,
-  mockScore: number // 0-100
+  mockScore: number, // 0-100
+  liveDifficultyScore?: number
 ): ReadinessScore {
   const diff = calculateDifficultyScore(company);
+  const finalDifficultyScore = liveDifficultyScore !== undefined ? liveDifficultyScore : diff.overallScore;
+
   const practiceRatio = totalQuestions > 0 ? questionsCompleted / totalQuestions : 0;
   const practiceScore = Math.round(practiceRatio * 100);
 
-  // Weight readiness inversely by difficulty
-  const difficultyPenalty = 1 - (diff.overallScore / 10) * 0.2;
+  const difficultyPenalty = 1 - (finalDifficultyScore / 10) * 0.2;
 
   const dsaReadiness = Math.round(gapAnalysis.dsaCompletion * difficultyPenalty);
   const systemDesignReadiness = Math.round(gapAnalysis.systemDesignCompletion * difficultyPenalty);
   const behavioralReadiness = Math.round(gapAnalysis.behavioralCompletion * difficultyPenalty);
+
   const overall = Math.round(
-    dsaReadiness * 0.4 + systemDesignReadiness * 0.2 + behavioralReadiness * 0.15 + practiceScore * 0.15 + mockScore * 0.1
+    dsaReadiness * 0.4 +
+    systemDesignReadiness * 0.2 +
+    behavioralReadiness * 0.15 +
+    practiceScore * 0.15 +
+    mockScore * 0.1
   );
 
   return {
@@ -160,7 +171,7 @@ export function calculateReadiness(
     systemDesignReadiness,
     behavioralReadiness,
     practiceScore,
-    companyDifficulty: diff.overallScore,
+    companyDifficulty: finalDifficultyScore,
   };
 }
 

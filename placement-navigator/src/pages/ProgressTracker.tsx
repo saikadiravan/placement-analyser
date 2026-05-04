@@ -38,7 +38,7 @@ export default function ProgressTracker() {
   });
 
   try {
-    const res = await rescheduleTasks((plan as any).company, completedIds, true);
+    const res = await rescheduleTasks((plan as any).company, completedIds);
     const updatedPlan = res.updated_plan;
 
 // Ensure structure consistency
