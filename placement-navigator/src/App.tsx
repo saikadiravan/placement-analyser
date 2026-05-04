@@ -15,13 +15,11 @@ import GapAnalyzer from "@/pages/GapAnalyzer";
 // import PipelineVisualization from "@/pages/PipelineVisualization";
 // import InterviewSimulator from "@/pages/InterviewSimulator";
 import NotFound from "./pages/NotFound";
-import { ModeProvider } from "@/context/ModeContext";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <ModeProvider>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -42,7 +40,6 @@ const App = () => (
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
-    </ModeProvider>
   </QueryClientProvider>
 );
 

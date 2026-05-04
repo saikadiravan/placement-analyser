@@ -9,7 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { COMPANIES, ROLES } from "@/lib/studyPlanEngine";
 import { fetchStudyPlan, runETLPipeline, rescheduleTasks } from "@/lib/api"; // Added rescheduleTasks
-import { useMode } from "@/context/ModeContext"; // Ensure you can access isOnline
+// // Ensure you can access isOnline
 
 
 const categoryColors: Record<string, string> = {
@@ -129,29 +129,14 @@ export default function StudyPlanGenerator() {
     toast.success("Study plan deleted.");
   };
 
-  const { isOnline } = useMode(); // Put this at the top of your component with your other hooks
+ // Put this at the top of your component with your other hooks
 
 const toggleTask = async (taskId: string) => {
   if (!activePlanId) return;
   const plan = savedPlans[activePlanId];
 
   // OFFLINE MODE (unchanged)
-  if (!isOnline) {
-    const updatedSchedule = plan.schedule.map((day: any) => ({
-      ...day,
-      tasks: day.tasks.map((t: any) =>
-        t.id === taskId ? { ...t, completed: !t.completed } : t
-      ),
-    }));
-
-    saveToStorage({
-      ...savedPlans,
-      [activePlanId]: { ...plan, schedule: updatedSchedule },
-    });
-
-    toast.success("Task updated locally.");
-    return;
-  }
+  
 
   // ✅ STEP 1: Update LOCAL state FIRST
   const updatedSchedule = plan.schedule.map((day: any) => ({

@@ -12,8 +12,7 @@ import {
   Workflow,
   Gamepad2,
 } from "lucide-react";
-import { Switch } from "@/components/ui/switch";
-import { useMode } from "@/context/ModeContext";
+
 
 const navItems = [
   { path: "/", label: "Home", icon: Brain },
@@ -29,7 +28,6 @@ const navItems = [
 ];
 
 export default function Navbar() {
-  const { isOnline, setIsOnline } = useMode();
   const location = useLocation();
 
   return (
@@ -74,40 +72,8 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Right Side (Toggle + Mobile Nav) */}
-        <div className="flex items-center gap-3">
-          
-          Online/Offline Toggle
-          <div className="hidden md:flex items-center space-x-3 ml-4">
-            <span className="text-sm font-medium text-muted-foreground">
-              {isOnline ? "Online (Live AI)" : "Offline (Mock Data)"}
-            </span>
-            <Switch 
-              checked={isOnline} 
-              onCheckedChange={setIsOnline} 
-            />
-          </div>
-
-          {/* Mobile Nav */}
-          <div className="flex gap-1 md:hidden">
-            {navItems.map((item) => {
-              const isActive = location.pathname === item.path;
-              return (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`rounded-lg p-2 transition-colors ${
-                    isActive
-                      ? "bg-primary/10 text-primary"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  <item.icon className="h-5 w-5" />
-                </Link>
-              );
-            })}
-          </div>
-        </div>
+        
+        
       </div>
     </nav>
   );

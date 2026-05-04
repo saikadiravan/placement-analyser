@@ -8,12 +8,10 @@ import { COMPANIES } from "@/lib/studyPlanEngine";
 import { ALL_TOPICS, analyzeGaps, calculateReadiness, type GapAnalysis, type ReadinessScore } from "@/lib/analyticsEngine";
 import { RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from "recharts";
 import { AlertTriangle, CheckCircle2, Target, Brain, Loader2, Sparkles } from "lucide-react";
-import { useMode } from "@/context/ModeContext";
 import { fetchCompanyInsights, fetchAIPriorities } from "@/lib/api"; // Updated Import
 import { toast } from "sonner";
 
 export default function GapAnalyzer() {
-  const { isOnline } = useMode();
   const [company, setCompany] = useState("Google");
   const [completedDsa, setCompletedDsa] = useState<string[]>([]);
   const [completedSD, setCompletedSD] = useState<string[]>([]);
@@ -30,14 +28,14 @@ export default function GapAnalyzer() {
   useEffect(() => {
     setIsLoading(true);
     setAiAdvice(null);
-    fetchCompanyInsights(company, isOnline)
+    fetchCompanyInsights(company)
       .then(data => setLiveData(data))
       .catch(err => {
         console.error(err);
         setLiveData(null);
       })
       .finally(() => setIsLoading(false));
-  }, [company, isOnline]);
+  }, [company]);
 
   const gap: GapAnalysis = useMemo(() => {
     const liveRequirements = liveData ? {
@@ -57,23 +55,7 @@ export default function GapAnalyzer() {
     return calculateReadiness(company, gap, completedDsa.length + completedSD.length + completedBeh.length, 20, mockScore, liveDifficultyScore);
   }, [company, gap, completedDsa, completedSD, completedBeh, mockScore, liveData]);
 
-  const handleAIPrioritization = async () => {
-    if (!isOnline) {
-        toast.error("Please switch to Online mode to use AI prioritization.");
-        return;
-    }
-    setIsAnalyzing(true);
-    try {
-        // Securely fetching from our new backend endpoint!
-        const advice = await fetchAIPriorities(company, liveData || {}, gap.gaps);
-        setAiAdvice(advice);
-        toast.success("AI Priorities Generated Successfully!");
-    } catch (err: any) {
-        toast.error(err.message || "Failed to generate AI priorities");
-    } finally {
-        setIsAnalyzing(false);
-    }
-  };
+
 
   const radarData = [
     { axis: "DSA", value: readiness.dsaReadiness },
@@ -134,10 +116,6 @@ export default function GapAnalyzer() {
                     </p>
                 </div>
                 
-                <Button onClick={handleAIPrioritization} disabled={isAnalyzing || !isOnline} className="whitespace-nowrap">
-                    {isAnalyzing ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Sparkles className="h-4 w-4 mr-2" />}
-                    Prioritize My Gaps
-                </Button>
             </div>
 
             {aiAdvice && (
